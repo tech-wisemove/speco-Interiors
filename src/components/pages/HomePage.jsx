@@ -59,6 +59,11 @@ export default function HomePage() {
                 
               With over a decade of industry experience, a customer-first approach, and advanced in-house manufacturing, we turn thoughtfully designed concepts into lasting spaces — built on honesty, quality, and trust.
               </p>
+              <p>
+                <a href={withBase("/about")} className="more-39291">
+                  More About Us
+                </a>
+              </p>
             </div>
             <div className="col-md-6 col-lg-5 ml-auto">
               <aside className="home-legacy" data-aos="fade-up" aria-label="10 years of experience">
@@ -79,17 +84,16 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
       <div className="site-section">
         <div className="container">
           <div className="row mb-5">
             <div className="col-md-7">
               <h2 className="heading-39291">
-                Our Featured 
-                <br />
-                 Services
+                 Spaces Designed Around You.
               </h2>
               <p>
-                From residential interiors and modular kitchens to commercial spaces and turnkey solutions — we design, manufacture, and install with care.
+                From residential interiors and modular kitchens to commercial spaces and turnkey solutions, we design, manufacture, and install with care.
               </p>
               <p className="my-5">
                 <a href={withBase("/services")} className="more-39291">
@@ -99,25 +103,26 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="row mb-5">
+          {/* <div className="row mb-5">
             <div className="col-12">
               <FeaturedYoutube />
             </div>
-          </div>
+          </div> */}
 
           <div className="row">
+
             <div className="col-md-6" data-aos="fade-up" data-aos-delay>
               <div className="media-92812">
                 <img src={withBase("/images/projects/jpg/project-15.jpg")} alt="Residential Interiors" title="Residential Interiors" className="img-fluid" />
                 <div className="text">
                   <span className="caption">
-                    Residential Interiors
+                    Residential 
                   </span>
-                  <h3>
+                  {/* <h3>
                     <a href={withBase("/services")}>
                       Modular Kitchens, Wardrobes & Living Spaces
                     </a>
-                  </h3>
+                  </h3> */}
                   <p className="my-5">
                     <a href={withBase("/projects")} className="more-39291">
                       Learn More
@@ -126,18 +131,19 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
             <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div className="media-92812">
                 <img src={withBase("/images/projects/jpg/project-06.jpg")} alt="Commercial Interiors" title="Commercial Interiors" className="img-fluid" />
                 <div className="text">
                   <span className="caption">
-                    Commercial Interiors
+                   Modular Kitchens
                   </span>
-                  <h3>
+                  {/* <h3>
                     <a href={withBase("/services")}>
                       Offices, Showrooms & Retail Spaces
                     </a>
-                  </h3>
+                  </h3> */}
                   <p className="my-5">
                     <a href={withBase("/projects")} className="more-39291">
                       Learn More
@@ -146,18 +152,19 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
             <div className="col-md-6" data-aos="fade-up" data-aos-delay>
               <div className="media-92812">
                 <img src={withBase("/images/projects/jpg/project-05.jpg")} alt="Turnkey Interior Solutions" title="Turnkey Interior Solutions" className="img-fluid" />
                 <div className="text">
                   <span className="caption">
-                    Turnkey Solutions
+                    Living & Dining
                   </span>
-                  <h3>
+                  {/* <h3>
                     <a href={withBase("/services")}>
                       Design, Manufacturing & Installation
                     </a>
-                  </h3>
+                  </h3> */}
                   <p className="my-5">
                     <a href={withBase("/projects")} className="more-39291">
                       Learn More
@@ -166,18 +173,19 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
             <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div className="media-92812">
                 <img src={withBase("/images/projects/jpg/project-10.jpg")} alt="In-House Manufacturing" title="In-House Manufacturing" className="img-fluid" />
                 <div className="text">
                   <span className="caption">
-                    In-House Manufacturing
+                    Bedrooms
                   </span>
-                  <h3>
+                  {/* <h3>
                     <a href={withBase("/services")}>
                       Pressing, CNC, Edge Banding & Boring
                     </a>
-                  </h3>
+                  </h3> */}
                   <p className="my-5">
                     <a href={withBase("/projects")} className="more-39291">
                       Learn More
@@ -186,10 +194,55 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
+            <div className="col-md-6" data-aos="fade-up" data-aos-delay>
+              <div className="media-92812">
+                <img src={withBase("/images/projects/jpg/project-15.jpg")} alt="Residential Interiors" title="Residential Interiors" className="img-fluid" />
+                <div className="text">
+                  <span className="caption">
+                    Wardrobes 
+                  </span>
+                  {/* <h3>
+                    <a href={withBase("/services")}>
+                      Modular Kitchens, Wardrobes & Living Spaces
+                    </a>
+                  </h3> */}
+                  <p className="my-5">
+                    <a href={withBase("/projects")} className="more-39291">
+                      Learn More
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div className="media-92812">
+                <img src={withBase("/images/projects/jpg/project-06.jpg")} alt="Commercial Interiors" title="Commercial Interiors" className="img-fluid" />
+                <div className="text">
+                  <span className="caption">
+                   Commercial
+                  </span>
+                  {/* <h3>
+                    <a href={withBase("/services")}>
+                      Offices, Showrooms & Retail Spaces
+                    </a>
+                  </h3> */}
+                  <p className="my-5">
+                    <a href={withBase("/projects")} className="more-39291">
+                      Learn More
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
       <div className="site-section">
+
         <div className="container">
           <div className="row mb-5 align-items-center">
             <div className="col-md-7">
@@ -208,6 +261,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
         <div className="media-29191">
           <div className="owl-2 owl-carousel">
             <img src={withBase("/images/projects/jpg/project-03.jpg")} alt="Living Rooms" title="Living Rooms" className="img-fluid" />
@@ -242,6 +296,362 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+  
+
+<section className="speco-craft-section">
+  <div className="container">
+
+    <div className="row align-items-center">
+
+      {/* LEFT CONTENT */}
+
+      <div className="col-lg-6 speco-craft-content">
+
+        <span className="speco-eyebrow">OUR CRAFT</span>
+
+        <h2 className="speco-section-title">
+          Where Design Meets
+          <br />
+          <span>Precision.</span>
+        </h2>
+
+        <p className="speco-section-description">
+          A great design is only as good as its making. Our in-house
+          production is built on accuracy, consistency and finish,
+          so what we draw is exactly what you receive.
+        </p>
+
+        <div className="row g-3 speco-craft-features">
+
+          <div className="col-sm-6">
+            <div className="speco-craft-item">
+              <span className="speco-craft-icon">
+                <i className="bi bi-bounding-box"></i>
+              </span>
+
+              <div>
+                <h4>CNC Panel Processing</h4>
+                <p>Exact cuts, repeated flawlessly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-craft-item">
+              <span className="speco-craft-icon">
+                <i className="bi bi-layers"></i>
+              </span>
+
+              <div>
+                <h4>Edge Finishing</h4>
+                <p>Clean, seamless edges that feel as good as they look.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-craft-item">
+              <span className="speco-craft-icon">
+                <i className="bi bi-crosshair"></i>
+              </span>
+
+              <div>
+                <h4>Precision Boring</h4>
+                <p>Perfect alignment, built for a lasting fit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-craft-item">
+              <span className="speco-craft-icon">
+                <i className="bi bi-columns-gap"></i>
+              </span>
+
+              <div>
+                <h4>Panel Pressing</h4>
+                <p>Uniform strength and a flawless surface.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* RIGHT IMAGE */}
+
+      <div className="col-lg-6 speco-craft-image-column">
+        <div className="speco-image-wrapper speco-craft-image">
+
+          <img
+            src={withBase("/images/craft/craft-main.jpg")}
+            alt="SPECO precision craftsmanship"
+            className="img-fluid"
+          />
+
+          <div className="speco-image-caption">
+            <span>01 / OUR CRAFT</span>
+            <p>Precision in every detail.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section className="speco-process-section">
+  <div className="container">
+
+    <div className="row align-items-center">
+
+      {/* LEFT IMAGE */}
+
+      <div className="col-lg-5 speco-process-image-column">
+
+        <div className="speco-image-wrapper speco-process-image">
+
+          <img
+            src={withBase("/images/process/process-main.jpg")}
+            alt="SPECO interior design process"
+            className="img-fluid"
+          />
+
+          <div className="speco-image-caption">
+            <span>02 / OUR PROCESS</span>
+            <p>From vision to reality.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT CONTENT */}
+
+      <div className="col-lg-7 speco-process-content">
+
+        <span className="speco-eyebrow">OUR PROCESS</span>
+
+        <h2 className="speco-section-title">
+          Four Steps. One Beautiful
+          <br />
+          <span>Transformation.</span>
+        </h2>
+
+        <p className="speco-section-description">
+          From the first conversation to the final installation,
+          we make your interior journey simple and seamless.
+        </p>
+
+        <div className="speco-process-list">
+
+          <div className="speco-process-item">
+            <span className="speco-process-number">01</span>
+
+            <div className="speco-process-details">
+              <h4>Discover</h4>
+              <p>
+                We listen first. Your vision, your needs, your budget.
+              </p>
+            </div>
+
+            <i className="bi bi-arrow-up-right speco-process-arrow"></i>
+          </div>
+
+          <div className="speco-process-item">
+            <span className="speco-process-number">02</span>
+
+            <div className="speco-process-details">
+              <h4>Design</h4>
+              <p>
+                Concepts, layouts and materials, shaped until they feel right.
+              </p>
+            </div>
+
+            <i className="bi bi-arrow-up-right speco-process-arrow"></i>
+          </div>
+
+          <div className="speco-process-item">
+            <span className="speco-process-number">03</span>
+
+            <div className="speco-process-details">
+              <h4>Create</h4>
+              <p>
+                Approved designs are crafted into precise, finished components.
+              </p>
+            </div>
+
+            <i className="bi bi-arrow-up-right speco-process-arrow"></i>
+          </div>
+
+          <div className="speco-process-item">
+            <span className="speco-process-number">04</span>
+
+            <div className="speco-process-details">
+              <h4>Deliver</h4>
+              <p>
+                Installation and finishing, handled with care until
+                the space is ready to live in.
+              </p>
+            </div>
+
+            <i className="bi bi-arrow-up-right speco-process-arrow"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section className="speco-why-section">
+  <div className="container">
+
+    <div className="row align-items-center">
+
+      {/* LEFT CONTENT */}
+
+      <div className="col-lg-7 speco-why-content">
+
+        <span className="speco-eyebrow">WHY SPECO</span>
+
+        <h2 className="speco-section-title">
+          Experience You Can Trust.
+          <br />
+          <span>Details You Can See.</span>
+        </h2>
+
+        <p className="speco-section-description">
+          Every space deserves thoughtful design and exceptional
+          execution. Here's what makes SPECO different.
+        </p>
+
+        <div className="row g-3 speco-why-grid">
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-award"></i>
+              </span>
+
+              <div>
+                <h4>10 Years of Experience</h4>
+                <p>A decade of refined judgment.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-palette"></i>
+              </span>
+
+              <div>
+                <h4>Personalised Design</h4>
+                <p>No templates, only your story.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-grid"></i>
+              </span>
+
+              <div>
+                <h4>Smart Space Planning</h4>
+                <p>Every inch considered and put to work.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-gem"></i>
+              </span>
+
+              <div>
+                <h4>Selected Materials</h4>
+                <p>Chosen for beauty, durability and feel.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-tools"></i>
+              </span>
+
+              <div>
+                <h4>Precision Craftsmanship</h4>
+                <p>Made in-house to exacting standards.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="speco-why-card">
+
+              <span className="speco-why-icon">
+                <i className="bi bi-heart"></i>
+              </span>
+
+              <div>
+                <h4>A Client-First Approach</h4>
+                <p>Clear communication and care at every stage.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT IMAGE */}
+
+      <div className="col-lg-5 speco-why-image-column">
+
+        <div className="speco-image-wrapper speco-why-image">
+
+          <img
+            src={withBase("/images/why-speco/why-speco.jpg")}
+            alt="SPECO interior design and craftsmanship"
+            className="img-fluid"
+          />
+
+          <div className="speco-image-caption">
+            <span>03 / WHY SPECO</span>
+            <p>Designed around you.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
       </div>
 
       <HomeBelowProjects />
@@ -251,10 +661,13 @@ export default function HomePage() {
           <div className="row justify-content-center text-center mb-5 section-2-title">
             <div className="col-md-6">
               <h2 className="heading-39291">
-                Rooted in Care. Built on Trust.
+                 Good Design Is Felt, Not Just Seen.
               </h2>
               <p>
-                Our vision is to create thoughtfully designed spaces that inspire better living. Our mission is to deliver beautifully crafted interiors with honesty, quality, and lasting value — for homes and businesses across Kochi and beyond.
+                A beautiful space should do more than look good. It should feel right, work effortlessly and make everyday life a little better.
+                </p>
+                <p style={{ color: '#897c66'}}>
+                We don't just shape spaces. We shape experiences.
               </p>
             </div>
           </div>

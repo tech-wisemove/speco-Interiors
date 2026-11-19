@@ -68,7 +68,7 @@ export default function ServicesPage() {
               <div className="col-lg-7 text-center">
                 <h1 style={{ color: 'white' }}>Our Services</h1>
                 <p style={{ color: 'white' }}>
-                  From modular kitchens to turnkey offices — design, manufacture, and install under one
+                  From modular kitchens to turnkey offices, design, manufacture, and install under one
                   roof.
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             <div className="col-lg-5">
               <p className="svc-intro__lead mb-0">
                 Residential and commercial interiors with quality craftsmanship, advanced in-house
-                manufacturing, and a customer-first approach — elegant, functional, and built to last.
+                manufacturing, and a customer-first approach, elegant, functional, and built to last.
               </p>
             </div>
           </div>
@@ -100,12 +100,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Residential — image mosaic */}
-      <section className="svc-band">
+      <section className="svc-band ">
         <div className="container">
           <div className="svc-band__head">
             <p className="svc-eyebrow">Homes</p>
             <h2 className="heading-39291">Residential Interiors</h2>
-            <p>Spaces for living, cooking, resting, and gathering — tailored to your home.</p>
+            <p>Homes composed around your lifestyle, personal and enduring.</p>
           </div>
           <div className="svc-mosaic svc-mosaic--six">
             {RESIDENTIAL.map((item) => (
@@ -121,13 +121,102 @@ export default function ServicesPage() {
         </div>
       </section>
 
+    <section className="svc-band">
+        <div className="container">
+          <div className="svc-band__head">
+            <p className="svc-eyebrow">Workplaces</p>
+            <h2 className="heading-39291">Custom Wardrobes</h2>
+            <p>Tailored storage that fits your space and disappears into its design.
+</p>
+          </div>
+          <div className="svc-mosaic svc-mosaic--four">
+            {COMMERCIAL.map((item) => (
+              <article className="svc-tile svc-tile--tall" key={item.label}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.label} loading="lazy" />
+                <div className="svc-tile__label">
+                  <span>{item.label}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="svc-band ">
+        <div className="container">
+          <div className="svc-band__head">
+            <p className="svc-eyebrow">Homes</p>
+            <h2 className="heading-39291">Modular Kitchens</h2>
+            <p>Intelligent layouts, refined finishes, and kitchens made for daily living.
+</p>
+          </div>
+          <div className="svc-mosaic svc-mosaic--six">
+            {RESIDENTIAL.map((item) => (
+              <article className="svc-tile" key={item.label}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.label} loading="lazy" />
+                <div className="svc-tile__label">
+                  <span>{item.label}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="svc-band">
+        <div className="container">
+          <div className="svc-band__head">
+            <p className="svc-eyebrow">Workplaces</p>
+            <h2 className="heading-39291">Living & Bedroom Interiors</h2>
+            <p>Rooms of comfort and character, resolved down to the last detail.
+</p>
+          </div>
+          <div className="svc-mosaic svc-mosaic--four">
+            {COMMERCIAL.map((item) => (
+              <article className="svc-tile svc-tile--tall" key={item.label}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.label} loading="lazy" />
+                <div className="svc-tile__label">
+                  <span>{item.label}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="svc-band ">
+        <div className="container">
+          <div className="svc-band__head">
+            <p className="svc-eyebrow">Homes</p>
+            <h2 className="heading-39291">Complete Interior Solutions</h2>
+            <p> One team from concept to installation. Design, planning, production and finish, all under one roof.
+</p>
+          </div>
+          <div className="svc-mosaic svc-mosaic--six">
+            {RESIDENTIAL.map((item) => (
+              <article className="svc-tile" key={item.label}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.img} alt={item.label} loading="lazy" />
+                <div className="svc-tile__label">
+                  <span>{item.label}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+
       {/* Commercial — wider tiles */}
-      <section className="svc-band svc-band--soft">
+      <section className="svc-band">
         <div className="container">
           <div className="svc-band__head">
             <p className="svc-eyebrow">Workplaces</p>
             <h2 className="heading-39291">Commercial Interiors</h2>
-            <p>Professional environments built for durability, clarity, and brand presence.</p>
+            <p>Workspaces and showrooms that carry your brand with presence.</p>
           </div>
           <div className="svc-mosaic svc-mosaic--four">
             {COMMERCIAL.map((item) => (
@@ -144,7 +233,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Turnkey */}
-      <section className="svc-band">
+      {/* <section className="svc-band">
         <div className="container">
           <div className="svc-band__head svc-band__head--center">
             <p className="svc-eyebrow">End to end</p>
@@ -166,10 +255,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Manufacturing Process */}
-      <section className="svc-band svc-band--ink">
+      {/* <section className="svc-band svc-band--ink">
         <div className="container">
           <div className="svc-band__head">
             <p className="svc-eyebrow svc-eyebrow--light">Workshop</p>
@@ -186,10 +275,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Process — journey */}
-      <section className="svc-band">
+      {/* <section className="svc-band">
         <div className="container">
           <div className="svc-band__head svc-band__head--center">
             <p className="svc-eyebrow">How we work</p>
@@ -208,10 +297,10 @@ export default function ServicesPage() {
             ))}
           </ol>
         </div>
-      </section>
+      </section> */}
 
       {/* Closing CTA */}
-      <section className="site-section svc-close">
+      {/* <section className="site-section svc-close">
         <div className="container">
           <div className="svc-close__panel">
             <h2 className="heading-39291">Rooted in Care. Built on Trust.</h2>
@@ -224,7 +313,7 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <SiteFooter />
     </div>

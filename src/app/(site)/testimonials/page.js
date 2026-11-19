@@ -35,7 +35,7 @@ export default function TestimonialsPage() {
               </h2>
               <p>
                 Browse every review below — project photos, client names, and their words about working
-                with Swastam Interiors.
+                with SPECO Interiors.
               </p>
             </div>
           </div>

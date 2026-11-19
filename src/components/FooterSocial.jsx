@@ -2,7 +2,7 @@ const SOCIAL = [
   {
     key: 'instagram',
     label: 'Instagram',
-    href: 'https://www.instagram.com/swastaminteriors/',
+    href: 'https://www.instagram.com/SPECOinteriors/',
     icon: 'fab fa-instagram',
   },
   {
@@ -10,24 +10,6 @@ const SOCIAL = [
     label: 'Facebook',
     href: 'https://www.facebook.com/',
     icon: 'fab fa-facebook-f',
-  },
-  {
-    key: 'twitter',
-    label: 'Twitter',
-    href: 'https://twitter.com/',
-    icon: 'fab fa-twitter',
-  },
-  {
-    key: 'pinterest',
-    label: 'Pinterest',
-    href: 'https://www.pinterest.com/',
-    icon: 'fab fa-pinterest-p',
-  },
-  {
-    key: 'linkedin',
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
-    icon: 'fab fa-linkedin-in',
   },
   {
     key: 'youtube',

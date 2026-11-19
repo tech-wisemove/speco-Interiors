@@ -8,7 +8,7 @@ export const TESTIMONIALS = [
     name: 'Ananya Menon',
     role: 'Homeowner, Kochi',
     quote:
-      'Swastam transformed our apartment into a warm, functional home. The team listened carefully and delivered quality we can feel every day. From the first consultation to the final handover, every detail was handled with care.',
+      'SPECO transformed our apartment into a warm, functional home. The team listened carefully and delivered quality we can feel every day. From the first consultation to the final handover, every detail was handled with care.',
     images: [img(3), img(4), img(5)],
   },
   {
@@ -22,7 +22,7 @@ export const TESTIMONIALS = [
     name: 'Priya Nair',
     role: 'Villa Project',
     quote:
-      'From modular kitchen to wardrobes, every detail was thoughtfully crafted. We recommend Swastam without hesitation. Their in-house manufacturing gave us confidence in both quality and timelines.',
+      'From modular kitchen to wardrobes, every detail was thoughtfully crafted. We recommend SPECO without hesitation. Their in-house manufacturing gave us confidence in both quality and timelines.',
     images: [img(9), img(8), img(7)],
   },
   {
@@ -36,7 +36,7 @@ export const TESTIMONIALS = [
     name: 'Meera Joseph',
     role: 'Residential Client',
     quote:
-      'Beautiful spaces, honest communication, and lasting quality. Swastam lived up to their promise — built on trust. Our living areas feel elegant yet practical for everyday family life.',
+      'Beautiful spaces, honest communication, and lasting quality. SPECO lived up to their promise — built on trust. Our living areas feel elegant yet practical for everyday family life.',
     images: [img(14), img(15), img(16)],
   },
   {

@@ -80,7 +80,7 @@ export default function LegacyPageNav({
               <div className="site-logo">
                 <Link href="/">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={logoSrc} alt="Swastam Interiors LLP" title="Swastam Interiors LLP" style={{width: "400px", maxWidth: "100%", height: "auto", objectFit: "contain"}} />
+                  <img src={logoSrc} alt="SPECO Interiors" title="SPECO Interiors" style={{width: "400px", maxWidth: "100%", height: "auto", objectFit: "contain"}} />
                 </Link>
               </div>
               <div className="ml-auto toggle-button d-inline-block d-lg-none">

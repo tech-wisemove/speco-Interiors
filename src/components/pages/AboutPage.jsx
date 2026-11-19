@@ -53,7 +53,7 @@ export default function AboutPage() {
                 with care &amp; precision
               </h2>
               <p>
-                Swastam Interiors LLP creates elegant, functional, and timeless residential and
+                SPECO Interiors creates elegant, functional, and timeless residential and
                 commercial interiors — delivering quality craftsmanship through innovative design and
                 advanced manufacturing in Kochi.
               </p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={withBase("/images/projects/jpg/project-01.jpg")}
-                  alt="Swastam Interiors craftsmanship"
+                  alt="SPECO Interiors craftsmanship"
                   loading="lazy"
                 />
               </figure>
@@ -167,10 +167,10 @@ export default function AboutPage() {
             </span>
             <blockquote>
               <p>
-                Swastam Interiors transformed our space with craftsmanship and a transparent process
+                SPECO Interiors transformed our space with craftsmanship and a transparent process
                 from start to finish — quality you can feel every day.
               </p>
-              <cite>A Swastam client</cite>
+              <cite>A SPECO client</cite>
             </blockquote>
             <div className="about-voice__actions">
               <a href={withBase("/testimonials")} className="more-39291">

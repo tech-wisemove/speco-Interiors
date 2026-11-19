@@ -1,7 +1,7 @@
 export const FALLBACK_FAQS = [
   {
     _id: 'faq-1',
-    question: 'What services does Swastam Interiors offer?',
+    question: 'What services does SPECO Interiors offer?',
     answer:
       'We provide residential and commercial interiors, modular kitchens, custom wardrobes, living and bedroom interiors, office fit-outs, and complete turnkey design–manufacture–install solutions.',
     order: 1,
@@ -56,7 +56,7 @@ export const FALLBACK_FAQS = [
   },
   {
     _id: 'faq-9',
-    question: 'How do I start a project with Swastam?',
+    question: 'How do I start a project with SPECO?',
     answer:
       'Contact us via the website form, phone, or WhatsApp. We’ll schedule a consultation, understand your space and needs, and share a design direction with next steps.',
     order: 9,

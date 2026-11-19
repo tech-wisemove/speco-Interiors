@@ -1,4 +1,4 @@
-/** Public URL prefix for GitHub project Pages (e.g. `/swastam`). Empty on localhost / custom domain root. */
+/** Public URL prefix for GitHub project Pages (e.g. `/SPECO`). Empty on localhost / custom domain root. */
 export const BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '');
 
 /** Prefix a root-absolute site path (`/images/x`) for the current basePath. */

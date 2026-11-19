@@ -3,7 +3,7 @@ export const PRIVACY_FALLBACK = {
   title: 'Privacy Policy',
   content: `
     <p><em>Last updated: July 2026</em></p>
-    <p><strong>Swastam Interiors LLP</strong> (“we”, “us”) respects your privacy. This policy explains how we handle information you share through our website and enquiries.</p>
+    <p><strong>SPECO Interiors</strong> (“we”, “us”) respects your privacy. This policy explains how we handle information you share through our website and enquiries.</p>
 
     <h3>1. Information we collect</h3>
     <p>When you contact us or subscribe, we may collect your name, phone number, email address, project details, and any message you send.</p>
@@ -21,10 +21,10 @@ export const PRIVACY_FALLBACK = {
     <p>You may ask us to update or remove your contact details by reaching out via our <a href="${withBase('/contact')}">Contact</a> page.</p>
 
     <h3>6. Contact</h3>
-    <p>Swastam Interiors LLP, Edayar Industrial Area, Kochi – 683110. Questions about this policy: use the Contact page or call +91 98954 43222.</p>
+    <p>SPECO Interiors, Edayar Industrial Area, Kochi – 683110. Questions about this policy: use the Contact page or call +91 98954 43222.</p>
   `.trim(),
   seo: {
-    metaTitle: 'Privacy Policy | Swastam Interiors LLP',
-    metaDescription: 'Privacy Policy for Swastam Interiors LLP — how we handle contact details and enquiries.',
+    metaTitle: 'Privacy Policy | SPECO Interiors',
+    metaDescription: 'Privacy Policy for SPECO Interiors — how we handle contact details and enquiries.',
   },
 };

@@ -1,6 +1,6 @@
 {
-  "name": "Swastam Interiors LLP",
-  "short_name": "Swastam Interiors",
+  "name": "SPECO Interiors",
+  "short_name": "SPECO Interiors",
   "description": "Best interior designers in Kochi — residential & commercial interiors, modular kitchens, and turnkey solutions.",
   "start_url": "/",
   "display": "standalone",
@@ -15,7 +15,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/images/logo-swastam.png",
+      "src": "/images/logo-SPECO.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

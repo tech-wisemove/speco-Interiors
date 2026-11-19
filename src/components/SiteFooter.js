@@ -8,23 +8,19 @@ import { submitToGoogleSheet } from '@/lib/googleForms';
 
 const FOOTER_LINKS_LEFT = [
   { href: '/', label: 'Home' },
-  { href: '/projects', label: 'Project' },
-  { href: '/services', label: 'Service' },
   { href: '/about', label: 'About' },
   { href: '/gallery', label: 'Gallery' },
 ];
 
 const FOOTER_LINKS_RIGHT = [
-  { href: '/careers', label: 'Careers' },
-  { href: '/blogs', label: 'Blog' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/projects', label: 'Project' },
+  { href: '/services', label: 'Service' },
   { href: '/contact', label: 'Contact' },
 ];
 
 export default function SiteFooter({ settings }) {
-  const logo = settings?.logoUrl || withBase('/images/logo-tr.png');
-  const brand = settings?.brandName || 'Swastam Interiors LLP';
+  const logo = settings?.logoUrl || withBase('/images/logo-light.png');
+  const brand = settings?.brandName || 'SPECO Interiors';
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -63,8 +59,9 @@ export default function SiteFooter({ settings }) {
           <div className="col-lg-4 col-md-6 footer-col">
             <h2 className="footer-heading">About Us</h2>
             <p className="footer-about-text">
-              Swastam Interiors LLP creates elegant, functional, and timeless residential and
-              commercial interiors through innovative design and advanced manufacturing.
+              For a decade, SPECO has brought creativity, technical insight and hands-on
+craftsmanship to homes and businesses across Kerala. We design around people: how you
+live, how you work, and how you want a room to make you feel.
             </p>
           </div>
 
@@ -124,7 +121,7 @@ export default function SiteFooter({ settings }) {
                 </div>
               </div>
               <p className="newsletter_text mb-0">
-                {loading ? 'Submitting…' : 'Get updates from Swastam.'}
+                {loading ? 'Submitting…' : 'Get updates from SPECO.'}
               </p>
             </form>
           </div>
@@ -136,8 +133,8 @@ export default function SiteFooter({ settings }) {
               <p>
                 Copyright &copy; {new Date().getFullYear()} All rights reserved | This website is
                 designed and developed by{' '}
-                <a href="https://auxxweb.in" target="_blank" rel="noreferrer">
-                  Auxxweb Solutions
+                <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd" target="_blank" rel="noreferrer">
+                  Wisemove
                 </a>
               </p>
             </div>

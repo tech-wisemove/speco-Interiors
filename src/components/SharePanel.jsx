@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import QRCode from 'qrcode';
 
-const BRAND = 'Swastam Interiors LLP';
+const BRAND = 'SPECO Interiors';
 
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -176,7 +176,7 @@ export default function SharePanel({ open, onClose }) {
     if (!qrCard) return;
     const a = document.createElement('a');
     a.href = qrCard;
-    a.download = 'swastam-share-qr.png';
+    a.download = 'SPECO-share-qr.png';
     a.click();
   }
 

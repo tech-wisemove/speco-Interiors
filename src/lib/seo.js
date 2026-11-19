@@ -1,6 +1,6 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-export const BRAND_NAME = 'Swastam Interiors LLP';
-export const BRAND_SHORT = 'Swastam Interiors';
+export const BRAND_NAME = 'SPECO Interiors';
+export const BRAND_SHORT = 'SPECO Interiors';
 export const TAGLINE = 'Rooted in Care. Built on Trust.';
 export const LOGO_PATH = '/images/logo-tr.png';
 /** Social share / Open Graph thumbnail (WhatsApp, Facebook, LinkedIn, etc.) */
@@ -19,12 +19,12 @@ export const GEO = {
   addressRegion: 'Kerala',
   addressCountry: 'IN',
   phone: '+919895443222',
-  email: 'info@swastaminteriors.com',
+  email: 'info@SPECOinteriors.com',
 };
 
 export const DEFAULT_KEYWORDS = [
-  'Swastam Interiors',
-  'Swastam Interiors LLP',
+  'SPECO Interiors',
+  'SPECO Interiors',
   'best interior designers in Kochi',
   'interior designers in Kochi',
   'interior design Kochi',
@@ -39,28 +39,28 @@ export const DEFAULT_KEYWORDS = [
 ];
 
 export const DEFAULT_DESCRIPTION =
-  'Swastam Interiors — best interior designers in Kochi. Elegant residential & commercial interiors, modular kitchens, wardrobes, and turnkey design–manufacture–install from Edayar Industrial Area, Kochi.';
+  'SPECO Interiors — best interior designers in Kochi. Elegant residential & commercial interiors, modular kitchens, wardrobes, and turnkey design–manufacture–install from Edayar Industrial Area, Kochi.';
 
 /**
  * Central page SEO for titles, descriptions, and AEO-friendly phrasing.
  */
 export const PAGE_SEO = {
   home: {
-    title: 'Swastam Interiors | Best Interior Designers in Kochi',
+    title: 'SPECO Interiors | Best Interior Designers in Kochi',
     description: DEFAULT_DESCRIPTION,
     path: '/',
     keywords: DEFAULT_KEYWORDS,
   },
   about: {
-    title: 'About Swastam Interiors | Interior Designers in Kochi',
+    title: 'About SPECO Interiors | Interior Designers in Kochi',
     description:
-      'About Swastam Interiors LLP — over a decade of experience as trusted interior designers in Kochi. Customer-first design, quality craftsmanship, and advanced in-house manufacturing.',
+      'About SPECO Interiors — over a decade of experience as trusted interior designers in Kochi. Customer-first design, quality craftsmanship, and advanced in-house manufacturing.',
     path: '/about',
   },
   services: {
-    title: 'Interior Design Services in Kochi | Swastam Interiors',
+    title: 'Interior Design Services in Kochi | SPECO Interiors',
     description:
-      'Residential interiors, modular kitchens, wardrobes, commercial offices, and turnkey solutions from Swastam Interiors — best interior designers in Kochi with in-house manufacturing.',
+      'Residential interiors, modular kitchens, wardrobes, commercial offices, and turnkey solutions from SPECO Interiors — best interior designers in Kochi with in-house manufacturing.',
     path: '/services',
     keywords: [
       ...DEFAULT_KEYWORDS,
@@ -70,57 +70,57 @@ export const PAGE_SEO = {
     ],
   },
   projects: {
-    title: 'Interior Design Projects in Kochi | Swastam Interiors',
+    title: 'Interior Design Projects in Kochi | SPECO Interiors',
     description:
-      'Explore living rooms, modular kitchens, bedrooms, dining spaces, wardrobes, and office interiors crafted by Swastam Interiors — leading interior designers in Kochi.',
+      'Explore living rooms, modular kitchens, bedrooms, dining spaces, wardrobes, and office interiors crafted by SPECO Interiors — leading interior designers in Kochi.',
     path: '/projects',
   },
   gallery: {
-    title: 'Interior Design Gallery Kochi | Swastam Interiors',
+    title: 'Interior Design Gallery Kochi | SPECO Interiors',
     description:
-      'Browse the Swastam Interiors gallery — spaces crafted with precision and care by one of the best interior design teams in Kochi.',
+      'Browse the SPECO Interiors gallery — spaces crafted with precision and care by one of the best interior design teams in Kochi.',
     path: '/gallery',
   },
   contact: {
-    title: 'Contact Swastam Interiors Kochi | Free Design Quote',
+    title: 'Contact SPECO Interiors Kochi | Free Design Quote',
     description:
-      'Contact Swastam Interiors LLP in Kochi for residential or commercial interiors. Call +91 98954 43222 or visit Edayar Industrial Area for a free consultation.',
+      'Contact SPECO Interiors in Kochi for residential or commercial interiors. Call +91 98954 43222 or visit Edayar Industrial Area for a free consultation.',
     path: '/contact',
   },
   careers: {
-    title: 'Careers at Swastam Interiors Kochi | Join Our Team',
+    title: 'Careers at SPECO Interiors Kochi | Join Our Team',
     description:
-      'Join Swastam Interiors LLP in Kochi. Careers in interior design, manufacturing, and project delivery with a customer-first team.',
+      'Join SPECO Interiors in Kochi. Careers in interior design, manufacturing, and project delivery with a customer-first team.',
     path: '/careers',
   },
   blogs: {
-    title: 'Interior Design Blog Kochi | Swastam Interiors Tips',
+    title: 'Interior Design Blog Kochi | SPECO Interiors Tips',
     description:
-      'Ideas and insights on modular kitchens, materials for Kerala homes, and turnkey interiors from Swastam Interiors — Kochi’s trusted design & manufacturing team.',
+      'Ideas and insights on modular kitchens, materials for Kerala homes, and turnkey interiors from SPECO Interiors — Kochi’s trusted design & manufacturing team.',
     path: '/blogs',
   },
   faq: {
-    title: 'FAQ | Swastam Interiors Kochi — Interior Design Questions',
+    title: 'FAQ | SPECO Interiors Kochi — Interior Design Questions',
     description:
-      'Frequently asked questions about Swastam Interiors services, timelines, manufacturing, and how to start your interior project in Kochi.',
+      'Frequently asked questions about SPECO Interiors services, timelines, manufacturing, and how to start your interior project in Kochi.',
     path: '/faq',
   },
   testimonials: {
-    title: 'Client Testimonials | Swastam Interiors Kochi',
+    title: 'Client Testimonials | SPECO Interiors Kochi',
     description:
-      'Read client reviews of Swastam Interiors LLP — real homes and workplaces designed and built by trusted interior designers in Kochi.',
+      'Read client reviews of SPECO Interiors — real homes and workplaces designed and built by trusted interior designers in Kochi.',
     path: '/testimonials',
   },
   terms: {
-    title: 'Terms & Conditions | Swastam Interiors LLP',
+    title: 'Terms & Conditions | SPECO Interiors',
     description:
-      'Terms & Conditions for using the Swastam Interiors LLP website and engaging our interior design services in Kochi.',
+      'Terms & Conditions for using the SPECO Interiors website and engaging our interior design services in Kochi.',
     path: '/terms',
   },
   privacy: {
-    title: 'Privacy Policy | Swastam Interiors LLP',
+    title: 'Privacy Policy | SPECO Interiors',
     description:
-      'Privacy Policy for Swastam Interiors LLP — how we handle contact details and enquiries from clients in Kochi and beyond.',
+      'Privacy Policy for SPECO Interiors — how we handle contact details and enquiries from clients in Kochi and beyond.',
     path: '/privacy',
   },
 };
@@ -190,7 +190,7 @@ export function buildMetadata({
     icons: {
       icon: [
         { url: LOGO_PATH, type: 'image/png' },
-        { url: '/images/logo-swastam.png', type: 'image/png' },
+        { url: '/images/logo-SPECO.png', type: 'image/png' },
       ],
       shortcut: LOGO_PATH,
       apple: [{ url: LOGO_PATH, type: 'image/png' }],
@@ -252,7 +252,7 @@ export function organizationJsonLd(settings) {
   const brand = settings?.brandName || BRAND_NAME;
   const social = settings?.social || {};
   const sameAs = [
-    social.instagramUrl || 'https://www.instagram.com/swastaminteriors/',
+    social.instagramUrl || 'https://www.instagram.com/SPECOinteriors/',
     social.facebookUrl,
     social.linkedinUrl,
     social.youtubeUrl,
@@ -265,7 +265,7 @@ export function organizationJsonLd(settings) {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: brand,
-    alternateName: [BRAND_SHORT, 'Swastam Interiors Kochi'],
+    alternateName: [BRAND_SHORT, 'SPECO Interiors Kochi'],
     url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
@@ -349,7 +349,7 @@ export function websiteJsonLd() {
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
     name: BRAND_NAME,
-    alternateName: ['Swastam Interiors', 'Best Interior Designers in Kochi'],
+    alternateName: ['SPECO Interiors', 'Best Interior Designers in Kochi'],
     description: DEFAULT_DESCRIPTION,
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'en-IN',
@@ -398,10 +398,10 @@ export function serviceJsonLd() {
     provider: { '@id': `${SITE_URL}/#localbusiness` },
     areaServed: { '@type': 'City', name: 'Kochi' },
     description:
-      'Full-service interior design, modular kitchens, wardrobes, commercial fit-outs, and turnkey installation by Swastam Interiors in Kochi.',
+      'Full-service interior design, modular kitchens, wardrobes, commercial fit-outs, and turnkey installation by SPECO Interiors in Kochi.',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Swastam Interiors Services',
+      name: 'SPECO Interiors Services',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Interiors' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Modular Kitchens' } },

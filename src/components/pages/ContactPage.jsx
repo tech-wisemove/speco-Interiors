@@ -20,7 +20,7 @@ export default function ContactPage() {
                 </h1>
                 <p>
                   
-                                    Get in touch with Swastam Interiors LLP for inquiries about
+                                    Get in touch with SPECO Interiors for inquiries about
                                     residential or commercial interiors, manufacturing, or turnkey
                                     solutions. Rooted in Care. Built on Trust.
                                 
@@ -47,7 +47,7 @@ export default function ContactPage() {
                       Brand:
                     </span>
                     <span>
-                      Swastam Interiors LLP
+                      SPECO Interiors
                     </span>
                   </li>
                   <li className="d-block mb-3">
@@ -73,8 +73,8 @@ export default function ContactPage() {
                       Email:
                     </span>
                     <span>
-                      <a href="mailto:info@swastaminteriors.com">
-                        info@swastaminteriors.com
+                      <a href="mailto:info@SPECOinteriors.com">
+                        info@SPECOinteriors.com
                       </a>
                     </span>
                   </li>
@@ -83,8 +83,8 @@ export default function ContactPage() {
                       Instagram:
                     </span>
                     <span>
-                      <a href="https://www.instagram.com/swastaminteriors/" target="_blank" rel="noopener">
-                        @swastaminteriors
+                      <a href="https://www.instagram.com/SPECOinteriors/" target="_blank" rel="noopener">
+                        @SPECOinteriors
                       </a>
                     </span>
                   </li>
@@ -104,7 +104,7 @@ export default function ContactPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Swastam Interiors LLP location map"
+            title="SPECO Interiors location map"
           />
         </div>
       </div>

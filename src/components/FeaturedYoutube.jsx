@@ -84,7 +84,7 @@ export default function FeaturedYoutube() {
             <iframe
               key={`${muted ? 'm' : 'u'}-${inView}`}
               src={embedSrc({ autoplay: true, mute: muted })}
-              title="Swastam Interiors featured video"
+              title="SPECO Interiors featured video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               loading="lazy"

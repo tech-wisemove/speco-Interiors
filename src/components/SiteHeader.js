@@ -9,7 +9,7 @@ import { ALL_NAV, LEFT_NAV, RIGHT_NAV } from '@/lib/siteNav';
 export default function SiteHeader({ settings }) {
   const pathname = usePathname();
   const logo = settings?.logoUrl || withBase('/images/logo-light.png');
-  const brand = settings?.brandName || 'Swastam Interiors LLP';
+  const brand = settings?.brandName || 'SPECO Interiors';
   const [open, setOpen] = useState(false);
 
   const isActive = (href) => {

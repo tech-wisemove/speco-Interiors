@@ -47,9 +47,9 @@ jobs:
 
       - name: Build static site for custom domain (root)
         env:
-          # Custom domain serves from site ROOT — do not use /swastam basePath
-          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://swastaminteriors.com' }}
-          # Force empty base path for swastaminteriors.com (ignore stale /swastam env var)
+          # Custom domain serves from site ROOT — do not use /SPECO basePath
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://SPECOinteriors.com' }}
+          # Force empty base path for SPECOinteriors.com (ignore stale /SPECO env var)
           NEXT_PUBLIC_BASE_PATH: ''
           # Featured home video (force so a stale GitHub Environment var cannot override)
           NEXT_PUBLIC_FEATURED_YOUTUBE_ID: 'vf5LaUHFUGc'
@@ -64,7 +64,7 @@ jobs:
             echo "::warning::NEXT_PUBLIC_GOOGLE_SCRIPT_URL is empty — using committed public/form-config.json if present."
           fi
           # Keep CNAME for custom domain
-          printf '%s\n' "swastaminteriors.com" > public/CNAME
+          printf '%s\n' "SPECOinteriors.com" > public/CNAME
           npm run build:pages
 
       - name: Upload Pages artifact

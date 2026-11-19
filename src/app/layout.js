@@ -11,7 +11,7 @@ export const metadata = {
   icons: {
     icon: [
       { url: LOGO_PATH, type: 'image/png' },
-      { url: '/images/logo-swastam.png', type: 'image/png' },
+      { url: '/images/logo-SPECO.png', type: 'image/png' },
     ],
     shortcut: LOGO_PATH,
     apple: [{ url: LOGO_PATH, type: 'image/png' }],

@@ -2370,3 +2370,655 @@ a.more-39291 {
     color: #ffffff;
     margin-bottom: 30px;
 }
+
+
+
+.speco-craft-section,
+.speco-process-section,
+.speco-why-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.speco-craft-section *,
+.speco-process-section *,
+.speco-why-section * {
+    box-sizing: border-box;
+}
+
+.speco-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #9C7A3C;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.speco-section-title {
+    font-size: clamp(32px, 3.8vw, 49px);
+    line-height: 1.18;
+    font-weight: 500;
+    color: #24231F;
+    letter-spacing: -1.5px;
+    margin: 0 0 22px;
+}
+
+.speco-section-title span {
+    color: #9C7A3C;
+}
+
+.speco-section-description {
+    color: #77736C;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 520px;
+    margin: 0 0 30px;
+}
+
+/* =========================================================
+   02. COMMON IMAGE STYLES
+========================================================= */
+
+.speco-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #E8E4DA;
+    border-radius: 3px;
+}
+
+.speco-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s ease;
+}
+
+.speco-image-wrapper:hover img {
+    transform: scale(1.04);
+}
+
+.speco-image-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px 28px 25px;
+    background: linear-gradient(
+        to top,
+        rgba(36, 35, 31, 0.80),
+        rgba(36, 35, 31, 0)
+    );
+    pointer-events: none;
+}
+
+.speco-image-caption span {
+    display: block;
+    color: #D5B77E;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.speco-image-caption p {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =========================================================
+   03. OUR CRAFT SECTION
+========================================================= */
+
+.speco-craft-section {
+    padding: 110px 0;
+    background: #F8F7F3;
+}
+
+.speco-craft-content {
+    padding-right: 45px;
+}
+
+.speco-craft-image-column {
+    padding-left: 35px;
+}
+
+.speco-craft-image {
+    height: 570px;
+}
+
+.speco-craft-features {
+    margin-top: 40px;
+}
+
+.speco-craft-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    height: 100%;
+    padding: 18px 12px 18px 0;
+    border-bottom: 1px solid rgba(156, 122, 60, 0.20);
+    transition: all 0.3s ease;
+}
+
+.speco-craft-icon {
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEE9DC;
+    color: #9C7A3C;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+
+.speco-craft-item:hover .speco-craft-icon {
+    background: #9C7A3C;
+    color: #FFFFFF;
+}
+
+.speco-craft-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #24231F;
+    margin: 3px 0 7px;
+    line-height: 1.5;
+}
+
+.speco-craft-item p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #77736C;
+    margin: 0;
+}
+
+/* =========================================================
+   04. OUR PROCESS SECTION
+========================================================= */
+
+.speco-process-section {
+    padding: 110px 0;
+    background: #FFFFFF;
+}
+
+.speco-process-image-column {
+    padding-right: 45px;
+}
+
+.speco-process-image {
+    height: 650px;
+}
+
+.speco-process-content {
+    padding-left: 35px;
+}
+
+.speco-process-content .speco-section-title {
+    font-size: clamp(30px, 3.3vw, 43px);
+}
+
+.speco-process-list {
+    margin-top: 35px;
+    border-top: 1px solid #E8E3D9;
+}
+
+.speco-process-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 23px 5px;
+    border-bottom: 1px solid #E8E3D9;
+    transition: all 0.3s ease;
+}
+
+.speco-process-number {
+    font-size: 25px;
+    font-weight: 500;
+    color: #9C7A3C;
+    min-width: 48px;
+    line-height: 1.2;
+}
+
+.speco-process-details {
+    flex: 1;
+}
+
+.speco-process-details h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #24231F;
+    margin: 0 0 6px;
+}
+
+.speco-process-details p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #77736C;
+    margin: 0;
+}
+
+.speco-process-arrow {
+    font-size: 19px;
+    color: #9C7A3C;
+    opacity: 0;
+    transform: translate(-5px, 5px);
+    transition: all 0.3s ease;
+}
+
+.speco-process-item:hover {
+    padding-left: 13px;
+}
+
+.speco-process-item:hover .speco-process-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* =========================================================
+   05. WHY SPECO SECTION
+========================================================= */
+
+.speco-why-section {
+    padding: 110px 0;
+    background: #F4F1E8;
+}
+
+.speco-why-content {
+    padding-right: 35px;
+}
+
+.speco-why-image-column {
+    padding-left: 35px;
+}
+
+.speco-why-image {
+    height: 650px;
+}
+
+.speco-why-grid {
+    margin-top: 35px;
+}
+
+.speco-why-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+    min-height: 145px;
+    padding: 23px 18px;
+    background: #FFFFFF;
+    border: 1px solid rgba(156, 122, 60, 0.10);
+    transition: all 0.35s ease;
+}
+
+.speco-why-icon {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F4F1E8;
+    color: #9C7A3C;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+
+.speco-why-card h4 {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #24231F;
+    margin: 0 0 7px;
+}
+
+.speco-why-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #77736C;
+    margin: 0;
+}
+
+.speco-why-card:hover {
+    transform: translateY(-5px);
+    background: #24231F;
+    border-color: #24231F;
+}
+
+.speco-why-card:hover h4 {
+    color: #FFFFFF;
+}
+
+.speco-why-card:hover p {
+    color: #C5C0B6;
+}
+
+.speco-why-card:hover .speco-why-icon {
+    background: #9C7A3C;
+    color: #FFFFFF;
+}
+
+/* =========================================================
+   06. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .speco-craft-section,
+    .speco-process-section,
+    .speco-why-section {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+
+    .speco-craft-image {
+        height: 620px;
+    }
+
+    .speco-process-image,
+    .speco-why-image {
+        height: 680px;
+    }
+
+}
+
+/* =========================================================
+   07. SMALL DESKTOP / LARGE TABLET
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .speco-craft-content {
+        padding-right: 20px;
+    }
+
+    .speco-craft-image-column,
+    .speco-process-content,
+    .speco-why-image-column {
+        padding-left: 20px;
+    }
+
+    .speco-process-image-column,
+    .speco-why-content {
+        padding-right: 20px;
+    }
+
+    .speco-why-card {
+        padding: 18px 13px;
+        gap: 11px;
+    }
+
+    .speco-why-icon {
+        width: 38px;
+        min-width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+}
+
+/* =========================================================
+   08. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .speco-craft-section,
+    .speco-process-section,
+    .speco-why-section {
+        padding: 80px 0;
+    }
+
+    .speco-craft-content,
+    .speco-process-content,
+    .speco-why-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .speco-craft-image-column,
+    .speco-process-image-column,
+    .speco-why-image-column {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Craft image below content */
+
+    .speco-craft-image-column {
+        margin-top: 45px;
+    }
+
+    /* Process image above content */
+
+    .speco-process-image-column {
+        margin-bottom: 45px;
+    }
+
+    /* Why Speco image below cards */
+
+    .speco-why-image-column {
+        margin-top: 40px;
+    }
+
+    .speco-craft-image,
+    .speco-process-image,
+    .speco-why-image {
+        height: 430px;
+    }
+
+    .speco-section-description {
+        max-width: 650px;
+    }
+
+    .speco-process-content .speco-section-title {
+        font-size: 38px;
+    }
+
+}
+
+/* =========================================================
+   09. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .speco-craft-section,
+    .speco-process-section,
+    .speco-why-section {
+        padding: 65px 0;
+    }
+
+    .speco-section-title {
+        font-size: 34px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .speco-section-description {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .speco-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        margin-bottom: 15px;
+    }
+
+    /* Craft */
+
+    .speco-craft-features {
+        margin-top: 20px;
+    }
+
+    .speco-craft-image-column {
+        margin-top: 35px;
+    }
+
+    .speco-craft-item {
+        padding: 15px 5px 15px 0;
+    }
+
+    .speco-craft-item h4 {
+        font-size: 14px;
+    }
+
+    .speco-craft-item p {
+        font-size: 12px;
+    }
+
+    /* Process */
+
+    .speco-process-image-column {
+        margin-bottom: 35px;
+    }
+
+    .speco-process-content .speco-section-title {
+        font-size: 32px;
+    }
+
+    .speco-process-list {
+        margin-top: 25px;
+    }
+
+    .speco-process-item {
+        gap: 13px;
+        padding: 19px 0;
+    }
+
+    .speco-process-number {
+        font-size: 21px;
+        min-width: 38px;
+    }
+
+    .speco-process-details h4 {
+        font-size: 16px;
+    }
+
+    .speco-process-details p {
+        font-size: 12px;
+    }
+
+    /* Why Speco */
+
+    .speco-why-image-column {
+        margin-top: 30px;
+    }
+
+    .speco-why-grid {
+        margin-top: 25px;
+    }
+
+    .speco-why-card {
+        min-height: 135px;
+        padding: 18px 13px;
+        gap: 11px;
+    }
+
+    .speco-why-card h4 {
+        font-size: 14px;
+    }
+
+    .speco-why-card p {
+        font-size: 12px;
+    }
+
+    /* Images */
+
+    .speco-craft-image,
+    .speco-process-image,
+    .speco-why-image {
+        height: 340px;
+    }
+
+    .speco-image-caption {
+        padding: 40px 20px 20px;
+    }
+
+    .speco-image-caption p {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================================
+   10. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .speco-craft-section,
+    .speco-process-section,
+    .speco-why-section {
+        padding: 55px 0;
+    }
+
+    .speco-section-title {
+        font-size: 29px;
+        line-height: 1.22;
+    }
+
+    .speco-craft-image,
+    .speco-process-image,
+    .speco-why-image {
+        height: 280px;
+    }
+
+    .speco-image-caption {
+        padding: 35px 18px 18px;
+    }
+
+    .speco-image-caption span {
+        font-size: 9px;
+    }
+
+    .speco-image-caption p {
+        font-size: 14px;
+    }
+
+    .speco-craft-icon {
+        width: 37px;
+        min-width: 37px;
+        height: 37px;
+        font-size: 17px;
+    }
+
+    .speco-craft-item {
+        gap: 10px;
+    }
+
+    .speco-process-arrow {
+        font-size: 16px;
+    }
+
+}
+
+/* =========================================================
+   11. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .speco-craft-section *,
+    .speco-process-section *,
+    .speco-why-section * {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+

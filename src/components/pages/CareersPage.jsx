@@ -20,7 +20,7 @@ export default function CareersPage() {
                 </h1>
                 <p>
                   
-                                    Join Swastam Interiors LLP — craft beautiful spaces with a team
+                                    Join SPECO Interiors — craft beautiful spaces with a team
                                     rooted in care and built on trust. Explore open roles in design,
                                     manufacturing, and operations.
                                 

@@ -7,9 +7,9 @@ import SharePanel from '@/components/SharePanel';
 
 const LINKS = {
   quote: withBase('/contact'),
-  brochure: withBase('/brochures/swastam-catalogue-2026.pdf'),
+  brochure: withBase('/brochures/SPECO-catalogue-2026.pdf'),
   whatsapp: 'https://wa.me/919895443222',
-  instagram: 'https://www.instagram.com/swastaminteriors/',
+  instagram: 'https://www.instagram.com/SPECOinteriors/',
   call: 'tel:+919895443222',
 };
 
@@ -86,7 +86,7 @@ export default function FloatingContactBar() {
           <a
             href={LINKS.brochure}
             className="float-contact-bar__quote float-contact-bar__brochure"
-            download="Swastam-Catalogue-2026.pdf"
+            download="SPECO-Catalogue-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             title="Download Brochure"

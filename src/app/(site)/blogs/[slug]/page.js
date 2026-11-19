@@ -11,18 +11,18 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const blog = getFallbackBlogBySlug(params.slug);
   if (!blog) return {};
-  const title = blog.seo?.metaTitle || `${blog.title} | Swastam Interiors Kochi`;
+  const title = blog.seo?.metaTitle || `${blog.title} | SPECO Interiors Kochi`;
   return buildMetadata({
     title,
     description:
       blog.seo?.metaDescription ||
       blog.excerpt ||
-      `${blog.title} — interior design insights from Swastam Interiors, Kochi.`,
+      `${blog.title} — interior design insights from SPECO Interiors, Kochi.`,
     path: `/blogs/${blog.slug}`,
     image: blog.seo?.ogImage || blog.coverImage?.url,
     keywords: [
       ...(blog.tags || []),
-      'Swastam Interiors',
+      'SPECO Interiors',
       'interior designers in Kochi',
       'best interior designers in Kochi',
     ],

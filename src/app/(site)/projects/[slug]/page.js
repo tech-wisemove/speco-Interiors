@@ -12,13 +12,13 @@ export function generateMetadata({ params }) {
   const category = getCategoryBySlug(params.slug);
   if (!category) return pageMetadata('projects');
   return pageMetadata({
-    title: `${category.title} in Kochi | Swastam Interiors`,
-    description: `${category.body} Explore ${category.title.toLowerCase()} by Swastam Interiors — best interior designers in Kochi.`,
+    title: `${category.title} in Kochi | SPECO Interiors`,
+    description: `${category.body} Explore ${category.title.toLowerCase()} by SPECO Interiors — best interior designers in Kochi.`,
     path: `/projects/${category.slug}`,
     keywords: [
       category.title,
       `${category.title} Kochi`,
-      'Swastam Interiors',
+      'SPECO Interiors',
       'best interior designers in Kochi',
       'interior design Kochi',
     ],

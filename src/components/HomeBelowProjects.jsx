@@ -97,7 +97,7 @@ export default function HomeBelowProjects() {
                 <br />
                 News
               </h2>
-              <p>Ideas and updates from the Swastam studio.</p>
+              <p>Ideas and updates from the SPECO studio.</p>
             </div>
           </div>
 
