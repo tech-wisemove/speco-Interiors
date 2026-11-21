@@ -3,56 +3,59 @@ import { withBase } from '@/lib/paths';
 const img = (n) =>
   withBase(`/images/projects/jpg/project-${String(n).padStart(2, '0')}.jpg`);
 
+/*
+  Image map
+  01-10  -> Drishya, Kaloor, Kochi
+  11-20  -> Unni, Pathanamthitta
+
+  01 TV jali wall        02 L-sofa lounge        03 Shelf + bench corner
+  04 Grey-blue bedroom   05 Wood wardrobe + desk 06 Dressing passage
+  07 Brown wall bedroom  08 Bench + ceiling view 09 Desk + wardrobe corridor
+  10 White wardrobe
+  11 Rattan wardrobe     12 Rattan headboard bed 13 Green sofa living
+  14 TV wall + prayer    15 Navy wardrobe/vanity 16 Navy study desk
+  17 Navy bed view       18 Utility sink         19 Sage U-kitchen
+  20 Kitchen bar shelf
+
+  NOTE: values marked (guess) are placeholders - replace with real data.
+*/
+
 export const PROJECT_CATEGORIES = [
   {
     slug: 'living-room-interiors',
     caption: 'Living Rooms',
     title: 'Living Room Interiors',
     body: 'Thoughtfully designed living rooms that balance comfort, elegance, and everyday function — crafted with quality materials and lasting finishes for your home.',
-    cover: img(3),
+    cover: img(13),
     reverse: false,
     projects: [
       {
         id: 'lr-1',
-        title: 'Panampilly Family Living',
+        title: 'Kaloor Jali Wall Living',
         description:
-          'An open living room with custom TV unit, soft seating zones, and warm lighting designed for everyday family gatherings.',
-        location: 'Panampilly Nagar, Kochi',
-        owner: 'Ananya Menon',
-        squareFeet: '480 sq.ft',
-        duration: '6 weeks',
-        year: '2024',
-        images: [img(3), img(4), img(16)],
-        before: img(8),
-        after: img(3),
+          'A warm living room featuring a terracotta jali feature wall with open display shelves, a floating TV unit, and a cosy L-shaped sofa corner with wooden blinds.',
+        location: 'Kaloor, Kochi',
+        owner: 'Drishya',
+        squareFeet: '420 sq.ft', // guess
+        duration: '6 weeks', // guess
+        year: '2025', // guess
+        images: [img(1), img(2), img(3)],
+        before: null,
+        after: img(1),
       },
       {
         id: 'lr-2',
-        title: 'Marine Drive Apartment Lounge',
+        title: 'Pathanamthitta Emerald Living',
         description:
-          'A compact lounge refreshed with storage-rich media wall, calm neutrals, and finishes suited to coastal living.',
-        location: 'Marine Drive, Kochi',
-        owner: 'Rahul Krishnan',
-        squareFeet: '320 sq.ft',
-        duration: '4 weeks',
-        year: '2025',
-        images: [img(4), img(2), img(1)],
-        before: img(13),
-        after: img(4),
-      },
-      {
-        id: 'lr-3',
-        title: 'Vyttila Villa Hall',
-        description:
-          'A double-height living hall with layered lighting, custom joinery, and a welcoming seating layout for guests.',
-        location: 'Vyttila, Kochi',
-        owner: 'Priya Nair',
-        squareFeet: '720 sq.ft',
-        duration: '8 weeks',
-        year: '2023',
-        images: [img(16), img(3), img(14)],
-        before: img(10),
-        after: img(16),
+          'A rich emerald-green sectional paired with a fluted TV wall, wood-and-LED cove lighting, a prayer nook, and a marble-finish floor for a refined family space.',
+        location: 'Pathanamthitta',
+        owner: 'Unni',
+        squareFeet: '480 sq.ft', // guess
+        duration: '8 weeks', // guess
+        year: '2025', // guess
+        images: [img(13), img(14)],
+        before: null,
+        after: img(13),
       },
     ],
   },
@@ -61,112 +64,22 @@ export const PROJECT_CATEGORIES = [
     caption: 'Modular Kitchens',
     title: 'Modular Kitchens',
     body: 'Precision-built modular kitchens designed for efficiency and style — manufactured in-house with CNC cutting, edge banding, and quality craftsmanship you can trust.',
-    cover: img(9),
+    cover: img(19),
     reverse: true,
     projects: [
       {
         id: 'mk-1',
-        title: 'Kakkanad Parallel Kitchen',
+        title: 'Pathanamthitta Sage Green Kitchen',
         description:
-          'A parallel modular kitchen with soft-close drawers, durable laminates, and a clean workflow for busy weeknights.',
-        location: 'Kakkanad, Kochi',
-        owner: 'Meera Joseph',
-        squareFeet: '110 sq.ft',
-        duration: '5 weeks',
-        year: '2024',
-        images: [img(9), img(8), img(7)],
-        before: img(12),
-        after: img(9),
-      },
-      {
-        id: 'mk-2',
-        title: 'Edappally L-Shaped Kitchen',
-        description:
-          'L-shaped layout with tall pantry unit, under-cabinet lighting, and easy-clean surfaces for family cooking.',
-        location: 'Edappally, Kochi',
-        owner: 'Vivek Thomas',
-        squareFeet: '145 sq.ft',
-        duration: '6 weeks',
-        year: '2025',
-        images: [img(8), img(9), img(6)],
-        before: img(11),
-        after: img(8),
-      },
-    ],
-  },
-  {
-    slug: 'bedrooms-dining-areas',
-    caption: 'Bedrooms & Dining',
-    title: 'Bedrooms & Dining Areas',
-    body: 'From calm bedroom interiors to welcoming dining spaces — we create rooms that feel personal, practical, and built to last, with careful attention to storage, layout, and finish.',
-    cover: img(11),
-    reverse: false,
-    projects: [
-      {
-        id: 'bd-1',
-        title: 'Fort Kochi Suite & Dining',
-        description:
-          'Connected bedroom and dining zones with cohesive finishes, wardrobe storage, and a dining nook for four.',
-        location: 'Fort Kochi',
-        owner: 'Arjun R.',
-        squareFeet: '540 sq.ft',
-        duration: '7 weeks',
-        year: '2024',
-        images: [img(11), img(5), img(15)],
-        before: img(1),
-        after: img(11),
-      },
-      {
-        id: 'bd-2',
-        title: 'Aluva Twin Bedroom Set',
-        description:
-          'Two bedrooms sharing a design language — calm palettes, study corners, and maximized storage.',
-        location: 'Aluva, Kochi',
-        owner: 'Nikhil S.',
-        squareFeet: '380 sq.ft',
-        duration: '5 weeks',
-        year: '2023',
-        images: [img(5), img(14), img(11)],
-        before: img(2),
-        after: img(5),
-      },
-    ],
-  },
-  {
-    slug: 'wardrobes-office-interiors',
-    caption: 'Wardrobes & Offices',
-    title: 'Wardrobes & Office Interiors',
-    body: 'Custom wardrobes and commercial office interiors — including showrooms, retail spaces, and workstations — delivered through design, manufacturing, and installation under one roof.',
-    cover: img(7),
-    reverse: true,
-    projects: [
-      {
-        id: 'wo-1',
-        title: 'Palarivattom Walk-in Wardrobe',
-        description:
-          'Floor-to-ceiling wardrobe with hanging, drawers, and accessory trays finished for humid Kerala conditions.',
-        location: 'Palarivattom, Kochi',
-        owner: 'Megna Philip',
-        squareFeet: '90 sq.ft',
-        duration: '3 weeks',
-        year: '2025',
-        images: [img(7), img(6), img(12)],
-        before: img(15),
-        after: img(7),
-      },
-      {
-        id: 'wo-2',
-        title: 'Infopark Workstation Floor',
-        description:
-          'Open office workstations with cable management, durable laminates, and a clean professional look.',
-        location: 'Infopark, Kochi',
-        owner: 'Nova Tech Pvt Ltd',
-        squareFeet: '1,800 sq.ft',
-        duration: '10 weeks',
-        year: '2024',
-        images: [img(13), img(11), img(12)],
-        before: img(16),
-        after: img(13),
+          'A U-shaped sage-green modular kitchen with marble-look backsplash, under-cabinet LED lighting, a plant-and-bar display divider, and a separate utility wash area.',
+        location: 'Pathanamthitta',
+        owner: 'Unni',
+        squareFeet: '130 sq.ft', // guess
+        duration: '5 weeks', // guess
+        year: '2025', // guess
+        images: [img(19), img(20), img(18)],
+        before: null,
+        after: img(19),
       },
     ],
   },
@@ -175,74 +88,102 @@ export const PROJECT_CATEGORIES = [
     caption: 'Bedrooms',
     title: 'Bedroom Interiors',
     body: 'Serene bedrooms with custom wardrobes, study nooks, and warm finishes — designed for rest and everyday ease.',
-    cover: img(5),
+    cover: img(17),
     reverse: false,
     projects: [
       {
         id: 'br-1',
-        title: 'Thrikkakara Master Bedroom',
+        title: 'Kaloor Grey-Blue Master Bedroom',
         description:
-          'A restful master suite with soft lighting, upholstered headboard wall, and integrated wardrobe storage.',
-        location: 'Thrikkakara, Kochi',
-        owner: 'Sneha & Ajay',
-        squareFeet: '260 sq.ft',
-        duration: '5 weeks',
-        year: '2024',
-        images: [img(5), img(14), img(4)],
-        before: img(9),
-        after: img(5),
+          'A calm grey-blue bedroom with an upholstered headboard, glowing bedside units, a full-height wooden wardrobe, and a dressing nook tucked into the passage.',
+        location: 'Kaloor, Kochi',
+        owner: 'Drishya',
+        squareFeet: '240 sq.ft', // guess
+        duration: '5 weeks', // guess
+        year: '2025', // guess
+        images: [img(4), img(5), img(6)],
+        before: null,
+        after: img(4),
       },
       {
         id: 'br-2',
-        title: 'Kadavanthra Kids Bedroom',
+        title: 'Kaloor Warm Earth Bedroom',
         description:
-          'Playful yet practical kids room with study desk, loft storage, and durable finishes for growing years.',
-        location: 'Kadavanthra, Kochi',
-        owner: 'The George Family',
-        squareFeet: '180 sq.ft',
-        duration: '4 weeks',
-        year: '2025',
-        images: [img(14), img(5), img(2)],
-        before: img(6),
-        after: img(14),
+          'A cosy bedroom with a deep brown feature wall, brass sconces, a cove-lit ceiling, a window bench, a study desk, and a walk-through wardrobe corridor.',
+        location: 'Kaloor, Kochi',
+        owner: 'Drishya',
+        squareFeet: '280 sq.ft', // guess
+        duration: '6 weeks', // guess
+        year: '2025', // guess
+        images: [img(7), img(8), img(9), img(10)],
+        before: null,
+        after: img(7),
+      },
+      {
+        id: 'br-3',
+        title: 'Pathanamthitta Rattan Bedroom',
+        description:
+          'A light, tropical-themed bedroom with a rattan headboard, botanical feature wallpaper, pendant lights, a rattan-door wardrobe, and a built-in study desk.',
+        location: 'Pathanamthitta',
+        owner: 'Unni',
+        squareFeet: '220 sq.ft', // guess
+        duration: '5 weeks', // guess
+        year: '2025', // guess
+        images: [img(12), img(11)],
+        before: null,
+        after: img(12),
+      },
+      {
+        id: 'br-4',
+        title: 'Pathanamthitta Navy Master Suite',
+        description:
+          'A bold navy-and-cream master bedroom with a floating bed, full-wall wardrobe, round LED-mirror dressing unit, study desk, and backlit floating shelves.',
+        location: 'Pathanamthitta',
+        owner: 'Unni',
+        squareFeet: '300 sq.ft', // guess
+        duration: '7 weeks', // guess
+        year: '2025', // guess
+        images: [img(17), img(15), img(16)],
+        before: null,
+        after: img(17),
       },
     ],
   },
   {
-    slug: 'dining-spaces',
-    caption: 'Dining Areas',
-    title: 'Dining Spaces',
-    body: 'Inviting dining areas that bring family and guests together — crafted with quality materials and thoughtful detail.',
-    cover: img(15),
+    slug: 'wardrobes-dressing-units',
+    caption: 'Wardrobes',
+    title: 'Wardrobes & Dressing Units',
+    body: 'Custom wardrobes and dressing units built to the millimetre — from floor-to-ceiling storage to backlit vanities, designed, manufactured and installed under one roof.',
+    cover: img(10),
     reverse: true,
     projects: [
       {
-        id: 'ds-1',
-        title: 'Kaloor Formal Dining',
+        id: 'wd-1',
+        title: 'Kaloor Floor-to-Ceiling Wardrobes',
         description:
-          'A formal dining space for eight with feature wall paneling, ambient lighting, and easy-maintain surfaces.',
+          'Tall wardrobes with loft storage in natural wood and high-gloss white finishes, with sleek black handles and a dressing unit with LED edge-lit mirror.',
         location: 'Kaloor, Kochi',
-        owner: 'Joseph Family',
-        squareFeet: '210 sq.ft',
-        duration: '4 weeks',
-        year: '2024',
-        images: [img(15), img(1), img(3)],
-        before: img(7),
-        after: img(15),
+        owner: 'Drishya',
+        squareFeet: '90 sq.ft', // guess
+        duration: '3 weeks', // guess
+        year: '2025', // guess
+        images: [img(10), img(5), img(6)],
+        before: null,
+        after: img(10),
       },
       {
-        id: 'ds-2',
-        title: 'Ernakulam Compact Dining Nook',
+        id: 'wd-2',
+        title: 'Pathanamthitta Navy Wardrobe & Vanity',
         description:
-          'Space-efficient dining nook with built-in bench seating and storage tucked under the window line.',
-        location: 'Ernakulam, Kochi',
-        owner: 'Lakshmi R.',
-        squareFeet: '95 sq.ft',
-        duration: '3 weeks',
-        year: '2023',
-        images: [img(1), img(15), img(16)],
-        before: img(4),
-        after: img(1),
+          'A full-wall navy wardrobe with brass-toned handles and cream drawers, paired with a curved vanity, arched display shelves, and a glowing round mirror.',
+        location: 'Pathanamthitta',
+        owner: 'Unni',
+        squareFeet: '110 sq.ft', // guess
+        duration: '4 weeks', // guess
+        year: '2025', // guess
+        images: [img(15), img(16), img(11)],
+        before: null,
+        after: img(15),
       },
     ],
   },

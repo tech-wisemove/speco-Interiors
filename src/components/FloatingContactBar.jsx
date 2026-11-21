@@ -8,9 +8,9 @@ import SharePanel from '@/components/SharePanel';
 const LINKS = {
   quote: withBase('/contact'),
   brochure: withBase('/brochures/SPECO-catalogue-2026.pdf'),
-  whatsapp: 'https://wa.me/919895443222',
+  whatsapp: 'https://wa.me/9061104584',
   instagram: 'https://www.instagram.com/SPECOinteriors/',
-  call: 'tel:+919895443222',
+  call: 'tel:+919400104541',
 };
 
 function isPastHero() {

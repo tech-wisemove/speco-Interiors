@@ -82,7 +82,7 @@ async function buildBrandedQrCard(pageUrl) {
   // Footer line on card
   ctx.fillStyle = '#7a7268';
   ctx.font = '400 14px "DM Sans", Arial, sans-serif';
-  ctx.fillText('Rooted in Care. Built on Trust.', w / 2, h - 78);
+  ctx.fillText('Spaces That Speak Your Style.', w / 2, h - 78);
 
   return canvas.toDataURL('image/png');
 }

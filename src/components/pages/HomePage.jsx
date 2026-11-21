@@ -86,160 +86,135 @@ export default function HomePage() {
       </div>
 
       <div className="site-section">
-        <div className="container">
-          <div className="row mb-5">
-            <div className="col-md-7">
-              <h2 className="heading-39291">
-                 Spaces Designed Around You.
-              </h2>
-              <p>
-                From residential interiors and modular kitchens to commercial spaces and turnkey solutions, we design, manufacture, and install with care.
-              </p>
-              <p className="my-5">
-                <a href={withBase("/services")} className="more-39291">
-                  Learn More
-                </a>
-              </p>
-            </div>
-          </div>
+  <div className="container">
+    <div className="row mb-5">
+      <div className="col-md-7">
+        <h2 className="heading-39291">Spaces Designed Around You.</h2>
+        <p>
+          From residential interiors and modular kitchens to commercial spaces and turnkey solutions, we design, manufacture, and install with care.
+        </p>
+        <p className="my-5">
+          <a href={withBase("/services")} className="more-39291">
+            Learn More
+          </a>
+        </p>
+      </div>
+    </div>
 
-          {/* <div className="row mb-5">
-            <div className="col-12">
-              <FeaturedYoutube />
-            </div>
-          </div> */}
+    <div className="row">
 
-          <div className="row">
-
-            <div className="col-md-6" data-aos="fade-up" data-aos-delay>
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-15.jpg")} alt="Residential Interiors" title="Residential Interiors" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                    Residential 
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Modular Kitchens, Wardrobes & Living Spaces
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-06.jpg")} alt="Commercial Interiors" title="Commercial Interiors" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                   Modular Kitchens
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Offices, Showrooms & Retail Spaces
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6" data-aos="fade-up" data-aos-delay>
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-05.jpg")} alt="Turnkey Interior Solutions" title="Turnkey Interior Solutions" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                    Living & Dining
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Design, Manufacturing & Installation
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-10.jpg")} alt="In-House Manufacturing" title="In-House Manufacturing" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                    Bedrooms
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Pressing, CNC, Edge Banding & Boring
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6" data-aos="fade-up" data-aos-delay>
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-15.jpg")} alt="Residential Interiors" title="Residential Interiors" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                    Wardrobes 
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Modular Kitchens, Wardrobes & Living Spaces
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div className="media-92812">
-                <img src={withBase("/images/projects/jpg/project-06.jpg")} alt="Commercial Interiors" title="Commercial Interiors" className="img-fluid" />
-                <div className="text">
-                  <span className="caption">
-                   Commercial
-                  </span>
-                  {/* <h3>
-                    <a href={withBase("/services")}>
-                      Offices, Showrooms & Retail Spaces
-                    </a>
-                  </h3> */}
-                  <p className="my-5">
-                    <a href={withBase("/projects")} className="more-39291">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
+      {/* 1. Residential */}
+      <div className="col-md-6" data-aos="fade-up" data-aos-delay>
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-13.jpg")}
+            alt="Residential Interiors"
+            title="Residential Interiors"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Residential</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
           </div>
         </div>
       </div>
+
+      {/* 2. Modular Kitchens */}
+      <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-19.jpg")}
+            alt="Modular Kitchens"
+            title="Modular Kitchens"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Modular Kitchens</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Living Rooms (was "Living & Dining" - no dining photos yet) */}
+      <div className="col-md-6" data-aos="fade-up" data-aos-delay>
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-14.jpg")}
+            alt="Living Room Interiors"
+            title="Living Room Interiors"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Living Rooms</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. Bedrooms */}
+      <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-17.jpg")}
+            alt="Bedroom Interiors"
+            title="Bedroom Interiors"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Bedrooms</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 5. Wardrobes */}
+      <div className="col-md-6" data-aos="fade-up" data-aos-delay>
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-15.jpg")}
+            alt="Custom Wardrobes"
+            title="Custom Wardrobes"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Wardrobes</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 6. Commercial - PLACEHOLDER image, replace with a real commercial photo */}
+      <div className="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+        <div className="media-92812">
+          <img
+            src={withBase("/images/projects/jpg/project-09.jpg")}
+            alt="Commercial Interiors"
+            title="Commercial Interiors"
+            className="img-fluid"
+          />
+          <div className="text">
+            <span className="caption">Commercial</span>
+            <p className="my-5">
+              <a href={withBase("/projects")} className="more-39291">Learn More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      </div>
+
 
       <div className="site-section">
 

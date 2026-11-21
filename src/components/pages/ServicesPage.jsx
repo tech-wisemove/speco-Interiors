@@ -3,54 +3,84 @@ import LegacyPageNav from '@/components/LegacyPageNav';
 import SiteFooter from '@/components/SiteFooter';
 
 const RESIDENTIAL = [
-  { label: 'Modular Kitchens', img: withBase('/images/projects/jpg/project-09.jpg') },
-  { label: 'Wardrobes', img: withBase('/images/projects/jpg/project-07.jpg') },
-  { label: 'TV Units', img: withBase('/images/projects/jpg/project-04.jpg') },
-  { label: 'Living Room Interiors', img: withBase('/images/projects/jpg/project-03.jpg') },
-  { label: 'Bedroom Interiors', img: withBase('/images/projects/jpg/project-05.jpg') },
-  { label: 'Dining Spaces', img: withBase('/images/projects/jpg/project-15.jpg') },
+  { label: 'Modular Kitchens', img: withBase('/images/projects/jpg/project-19.jpg') },
+  { label: 'Wardrobes', img: withBase('/images/projects/jpg/project-10.jpg') },
+  { label: 'TV Units', img: withBase('/images/projects/jpg/project-01.jpg') },
+  { label: 'Living Room Interiors', img: withBase('/images/projects/jpg/project-13.jpg') },
+  { label: 'Bedroom Interiors', img: withBase('/images/projects/jpg/project-17.jpg') },
+  { label: 'Study & Dressing Units', img: withBase('/images/projects/jpg/project-16.jpg') },
 ];
 
+const WARDROBES = [
+  { label: 'Wooden Wardrobes', img: withBase('/images/projects/jpg/project-05.jpg') },
+  { label: 'Gloss White Wardrobes', img: withBase('/images/projects/jpg/project-10.jpg') },
+  { label: 'Rattan Wardrobes', img: withBase('/images/projects/jpg/project-11.jpg') },
+  { label: 'Navy Wardrobes', img: withBase('/images/projects/jpg/project-15.jpg') },
+];
+
+const KITCHENS = [
+  { label: 'U-Shaped Kitchens', img: withBase('/images/projects/jpg/project-19.jpg') },
+  { label: 'Display & Bar Units', img: withBase('/images/projects/jpg/project-20.jpg') },
+  { label: 'Utility Areas', img: withBase('/images/projects/jpg/project-18.jpg') },
+];
+
+const LIVING_BEDROOM = [
+  { label: 'Living Rooms', img: withBase('/images/projects/jpg/project-13.jpg') },
+  { label: 'TV & Prayer Units', img: withBase('/images/projects/jpg/project-14.jpg') },
+  { label: 'Master Bedrooms', img: withBase('/images/projects/jpg/project-17.jpg') },
+  { label: 'Bedroom Retreats', img: withBase('/images/projects/jpg/project-12.jpg') },
+];
+
+const COMPLETE_SOLUTIONS = [
+  { label: 'Living Spaces', img: withBase('/images/projects/jpg/project-02.jpg') },
+  { label: 'Bedrooms', img: withBase('/images/projects/jpg/project-07.jpg') },
+  { label: 'Kitchens', img: withBase('/images/projects/jpg/project-19.jpg') },
+  { label: 'Wardrobes', img: withBase('/images/projects/jpg/project-05.jpg') },
+  { label: 'Dressing Units', img: withBase('/images/projects/jpg/project-06.jpg') },
+  { label: 'Study Corners', img: withBase('/images/projects/jpg/project-09.jpg') },
+];
+
+// PLACEHOLDERS: no commercial photos yet, replace when you have them
 const COMMERCIAL = [
-  { label: 'Office Interiors', img: withBase('/images/projects/jpg/project-11.jpg') },
+  { label: 'Office Interiors', img: withBase('/images/projects/jpg/project-09.jpg') },
   { label: 'Showrooms', img: withBase('/images/projects/jpg/project-01.jpg') },
-  { label: 'Retail Spaces', img: withBase('/images/projects/jpg/project-12.jpg') },
-  { label: 'Workstations', img: withBase('/images/projects/jpg/project-13.jpg') },
+  { label: 'Retail Spaces', img: withBase('/images/projects/jpg/project-20.jpg') },
+  { label: 'Workstations', img: withBase('/images/projects/jpg/project-16.jpg') },
 ];
 
-const TURNKEY = [
-  {
-    step: '01',
-    title: 'Design',
-    body: 'Concept layouts, material direction, and detailed drawings shaped around how you live or work.',
-  },
-  {
-    step: '02',
-    title: 'Manufacturing',
-    body: 'Precision build in our Kochi facility — pressing, CNC, edge banding, and boring under one roof.',
-  },
-  {
-    step: '03',
-    title: 'Installation',
-    body: 'On-site fitting with careful finishing so every unit sits true, clean, and ready for daily use.',
-  },
-];
+// const TURNKEY = [
+//   {
+//     step: '01',
+//     title: 'Design',
+//     body: 'Concept layouts, material direction, and detailed drawings shaped around how you live or work.',
+//   },
+//   {
+//     step: '02',
+//     title: 'Manufacturing',
+//     body: 'Precision build in our Kochi facility — pressing, CNC, edge banding, and boring under one roof.',
+//   },
+//   {
+//     step: '03',
+//     title: 'Installation',
+//     body: 'On-site fitting with careful finishing so every unit sits true, clean, and ready for daily use.',
+//   },
+// ];
 
-const MANUFACTURING = [
-  { title: 'Pressing', body: 'Stable laminates and surfaces bonded for lasting flatness and finish.' },
-  { title: 'CNC Cutting', body: 'Accurate panel profiles cut to plan for clean joins and fit.' },
-  { title: 'Edge Banding', body: 'Sealed edges that look refined and stand up to everyday wear.' },
-  { title: 'Boring', body: 'Precise hardware holes so hinges, slides, and fittings align perfectly.' },
-];
+// const MANUFACTURING = [
+//   { title: 'Pressing', body: 'Stable laminates and surfaces bonded for lasting flatness and finish.' },
+//   { title: 'CNC Cutting', body: 'Accurate panel profiles cut to plan for clean joins and fit.' },
+//   { title: 'Edge Banding', body: 'Sealed edges that look refined and stand up to everyday wear.' },
+//   { title: 'Boring', body: 'Precise hardware holes so hinges, slides, and fittings align perfectly.' },
+// ];
 
-const PROCESS = [
-  { title: 'Consultation', body: 'We listen to your space, needs, and budget.' },
-  { title: 'Concept & Design', body: 'Layouts and finishes that feel personal and practical.' },
-  { title: 'Planning & Estimation', body: 'Clear scope, materials, and transparent costing.' },
-  { title: 'Manufacturing', body: 'Built in-house with quality checks at every stage.' },
-  { title: 'Delivery & Installation', body: 'Coordinated on-site fit-out and finishing.' },
-  { title: 'After-Sales Support', body: 'We’re here after handover when you need us.' },
-];
+// const PROCESS = [
+//   { title: 'Consultation', body: 'We listen to your space, needs, and budget.' },
+//   { title: 'Concept & Design', body: 'Layouts and finishes that feel personal and practical.' },
+//   { title: 'Planning & Estimation', body: 'Clear scope, materials, and transparent costing.' },
+//   { title: 'Manufacturing', body: 'Built in-house with quality checks at every stage.' },
+//   { title: 'Delivery & Installation', body: 'Coordinated on-site fit-out and finishing.' },
+//   { title: 'After-Sales Support', body: 'We’re here after handover when you need us.' },
+// ];
 
 export default function ServicesPage() {
   return (
@@ -99,7 +129,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Residential — image mosaic */}
       <section className="svc-band ">
         <div className="container">
           <div className="svc-band__head">
@@ -121,7 +150,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-    <section className="svc-band">
+      <section className="svc-band">
         <div className="container">
           <div className="svc-band__head">
             <p className="svc-eyebrow">Workplaces</p>
@@ -130,7 +159,7 @@ export default function ServicesPage() {
 </p>
           </div>
           <div className="svc-mosaic svc-mosaic--four">
-            {COMMERCIAL.map((item) => (
+            {WARDROBES.map((item) => (
               <article className="svc-tile svc-tile--tall" key={item.label}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.img} alt={item.label} loading="lazy" />
@@ -152,7 +181,7 @@ export default function ServicesPage() {
 </p>
           </div>
           <div className="svc-mosaic svc-mosaic--six">
-            {RESIDENTIAL.map((item) => (
+            {KITCHENS.map((item) => (
               <article className="svc-tile" key={item.label}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.img} alt={item.label} loading="lazy" />
@@ -174,7 +203,7 @@ export default function ServicesPage() {
 </p>
           </div>
           <div className="svc-mosaic svc-mosaic--four">
-            {COMMERCIAL.map((item) => (
+            {LIVING_BEDROOM.map((item) => (
               <article className="svc-tile svc-tile--tall" key={item.label}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.img} alt={item.label} loading="lazy" />
@@ -196,7 +225,7 @@ export default function ServicesPage() {
 </p>
           </div>
           <div className="svc-mosaic svc-mosaic--six">
-            {RESIDENTIAL.map((item) => (
+            {COMPLETE_SOLUTIONS.map((item) => (
               <article className="svc-tile" key={item.label}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.img} alt={item.label} loading="lazy" />
@@ -208,9 +237,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      
 
-      {/* Commercial — wider tiles */}
       <section className="svc-band">
         <div className="container">
           <div className="svc-band__head">

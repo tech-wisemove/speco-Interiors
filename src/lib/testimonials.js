@@ -5,45 +5,57 @@ const img = (n) =>
 
 export const TESTIMONIALS = [
   {
-    name: 'Ananya Menon',
-    role: 'Homeowner, Kochi',
+    name: 'Drishya',
+    role: 'Homeowner, Kaloor, Kochi',
+    quote: 'Every corner of our home feels thoughtfully designed. The living room and bedrooms turned out even more beautiful than we imagined. We absolutely love the warmth and elegance of the spaces.', 
+    images: [img(1), img(4), img(7)], // jali living wall, grey-blue bedroom, warm bedroom
+  },
+  {
+    name: 'Unni',
+    role: 'Homeowner, Pathanamthitta',
+    quote: 'We wanted a home that reflected our style while feeling comfortable and welcoming. The final design exceeded our expectations. From the kitchen to the bedrooms, every detail feels just right.', 
+    images: [img(13), img(19), img(17)], // emerald living room, sage kitchen, navy bedroom
+  },
+  {
+    name: 'Lakshmi',
+    role: 'Apartment Owner, Kakkanad',
     quote:
-      'SPECO transformed our apartment into a warm, functional home. The team listened carefully and delivered quality we can feel every day. From the first consultation to the final handover, every detail was handled with care.',
+      'Efficient layouts, soft-close drawers, easy-clean surfaces, and under-cabinet lighting. Every kitchen is planned around how you cook and built to handle Kerala\u2019s humid climate.',
     images: [img(3), img(4), img(5)],
   },
   {
-    name: 'Rahul Krishnan',
-    role: 'Business Owner',
+    name: 'Amal M',
+    role: 'Commercial Client',
     quote:
-      'Our office interiors were completed on time with excellent finish. Professional, transparent, and truly rooted in care. The workspace now feels premium and productive for our entire team.',
+      'Floor-to-ceiling storage planned around what you own, with hanging space, drawers, and loft units in finishes from natural wood and rattan to gloss white and navy.',
     images: [img(11), img(12), img(13)],
   },
   {
-    name: 'Priya Nair',
-    role: 'Villa Project',
+    name: 'Pooja Krishna',
+    role: 'Family Home Client',
     quote:
-      'From modular kitchen to wardrobes, every detail was thoughtfully crafted. We recommend SPECO without hesitation. Their in-house manufacturing gave us confidence in both quality and timelines.',
+      'Comfortable seating zones, TV units, display niches, and layered lighting that make a living room work for family evenings and guests alike.',
     images: [img(9), img(8), img(7)],
   },
   {
-    name: 'Vivek Thomas',
-    role: 'Showroom Client',
+    name: 'Alvin Lijo',
+    role: 'Bedroom Interiors',
     quote:
-      'Turnkey delivery made the process stress-free. Design, manufacturing, and installation were seamless end to end. Clients walking into our showroom always notice the finishes first.',
+      'Calm palettes, feature walls, bedside lighting, and built-in wardrobes and study desks, designed so the room feels restful and the floor space stays open.',
     images: [img(1), img(2), img(6)],
   },
   {
-    name: 'Meera Joseph',
-    role: 'Residential Client',
+    name: 'Maria Varghese',
+    role: 'First-Time Home Buyer',
     quote:
-      'Beautiful spaces, honest communication, and lasting quality. SPECO lived up to their promise — built on trust. Our living areas feel elegant yet practical for everyday family life.',
+      'Custom-made TV units, dressing tables with LED mirrors, and study desks with floating shelves, built to fit your room to the millimetre.',
     images: [img(14), img(15), img(16)],
   },
   {
-    name: 'Arjun R.',
-    role: 'Commercial Fit-out',
+    name: 'Arjun S',
+    role: 'Residential Client',
     quote:
-      'In-house manufacturing made a clear difference in precision and timelines. Outstanding craftsmanship throughout. We appreciated the clear updates and the care taken with every material choice.',
+      'One team for design, planning, in-house manufacturing, installation, and finishing, so you get aligned decisions and a single point of accountability from concept to handover.',
     images: [img(10), img(11), img(1)],
   },
 ];

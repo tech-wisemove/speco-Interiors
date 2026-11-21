@@ -1,32 +1,41 @@
+
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 export const BRAND_NAME = 'SPECO Interiors';
 export const BRAND_SHORT = 'SPECO Interiors';
-export const TAGLINE = 'Rooted in Care. Built on Trust.';
+export const TAGLINE = 'Spaces That Speak Your Style.';
 export const LOGO_PATH = '/images/logo-tr.png';
 /** Social share / Open Graph thumbnail (WhatsApp, Facebook, LinkedIn, etc.) */
 export const OG_IMAGE_PATH = '/images/og-share.jpg';
-
-/** Primary GEO / local SEO focus */
+ 
+/**
+ * Primary GEO / local SEO focus.
+ * TODO: add the real postalCode, latitude and longitude for Mattakuzhi.
+ * They are left empty on purpose: wrong coordinates hurt local SEO more than
+ * none. Empty values are skipped automatically in meta tags and JSON-LD.
+ */
 export const GEO = {
   region: 'IN-KL',
-  placename: 'Kochi',
-  position: '10.0159;76.3419',
-  latitude: 10.0159,
-  longitude: 76.3419,
-  postalCode: '683110',
-  streetAddress: 'Edayar Industrial Area',
-  addressLocality: 'Kochi',
+  placename: 'Ernakulam',
+  position: '9.9616375;76.3581094', // 'lat;long' once known, e.g. '10.0000;76.0000'
+  latitude: null,
+  longitude: null,
+  postalCode: '682309', 
+  streetAddress: 'Mattakuzhi',
+  addressLocality: 'Ernakulam',
   addressRegion: 'Kerala',
   addressCountry: 'IN',
-  phone: '+919895443222',
+  phone: '+919061104584',
+  phones: ['+919061104584', '+919400104541'],
   email: 'info@SPECOinteriors.com',
 };
-
+ 
+const hasCoords = (g) => typeof g.latitude === 'number' && typeof g.longitude === 'number';
+ 
 export const DEFAULT_KEYWORDS = [
-  'SPECO Interiors',
   'SPECO Interiors',
   'best interior designers in Kochi',
   'interior designers in Kochi',
+  'interior designers in Ernakulam',
   'interior design Kochi',
   'modular kitchen Kochi',
   'wardrobe Kochi',
@@ -35,106 +44,106 @@ export const DEFAULT_KEYWORDS = [
   'home interiors Kerala',
   'in-house manufacturing interiors',
   'office interiors Kochi',
-  BRAND_SHORT,
 ];
-
+ 
 export const DEFAULT_DESCRIPTION =
-  'SPECO Interiors — best interior designers in Kochi. Elegant residential & commercial interiors, modular kitchens, wardrobes, and turnkey design–manufacture–install from Edayar Industrial Area, Kochi.';
-
+  'SPECO Interiors designs residential and commercial interiors, modular kitchens, and custom wardrobes in Kochi and Ernakulam. Design, in-house manufacturing, and installation under one roof from Mattakuzhi, Ernakulam.';
+ 
 /**
  * Central page SEO for titles, descriptions, and AEO-friendly phrasing.
  */
 export const PAGE_SEO = {
   home: {
-    title: 'SPECO Interiors | Best Interior Designers in Kochi',
+    title: 'SPECO Interiors | Interior Designers in Kochi & Ernakulam',
     description: DEFAULT_DESCRIPTION,
     path: '/',
     keywords: DEFAULT_KEYWORDS,
   },
   about: {
-    title: 'About SPECO Interiors | Interior Designers in Kochi',
+    title: 'About SPECO Interiors | Ten Years of Design in Kerala',
     description:
-      'About SPECO Interiors — over a decade of experience as trusted interior designers in Kochi. Customer-first design, quality craftsmanship, and advanced in-house manufacturing.',
+      'For a decade, SPECO Interiors has brought creativity, technical insight, and hands-on craftsmanship to homes and businesses. Personalised design with advanced in-house manufacturing.',
     path: '/about',
   },
   services: {
     title: 'Interior Design Services in Kochi | SPECO Interiors',
     description:
-      'Residential interiors, modular kitchens, wardrobes, commercial offices, and turnkey solutions from SPECO Interiors — best interior designers in Kochi with in-house manufacturing.',
+      'Residential interiors, commercial interiors, modular kitchens, custom wardrobes, living and bedroom interiors, and complete interior solutions from SPECO Interiors.',
     path: '/services',
     keywords: [
       ...DEFAULT_KEYWORDS,
       'residential interiors Kochi',
       'modular kitchens Kochi',
+      'custom wardrobes Kochi',
       'office interiors Kochi',
     ],
   },
   projects: {
-    title: 'Interior Design Projects in Kochi | SPECO Interiors',
+    title: 'Interior Design Projects in Kerala | SPECO Interiors',
     description:
-      'Explore living rooms, modular kitchens, bedrooms, dining spaces, wardrobes, and office interiors crafted by SPECO Interiors — leading interior designers in Kochi.',
+      'Explore living rooms, modular kitchens, bedrooms, and wardrobes crafted by SPECO Interiors. Ideas imagined, spaces realised.',
     path: '/projects',
   },
   gallery: {
-    title: 'Interior Design Gallery Kochi | SPECO Interiors',
+    title: 'Interior Design Gallery | SPECO Interiors',
     description:
-      'Browse the SPECO Interiors gallery — spaces crafted with precision and care by one of the best interior design teams in Kochi.',
+      'Browse the SPECO Interiors gallery: homes and spaces crafted with precision and care.',
     path: '/gallery',
   },
   contact: {
-    title: 'Contact SPECO Interiors Kochi | Free Design Quote',
+    title: 'Contact SPECO Interiors | Free Design Consultation',
     description:
-      'Contact SPECO Interiors in Kochi for residential or commercial interiors. Call +91 98954 43222 or visit Edayar Industrial Area for a free consultation.',
+      'Have a project in mind? Call SPECO Interiors on +91 90611 04584 or +91 94001 04541, or send an enquiry. Based in Mattakuzhi, Ernakulam.',
     path: '/contact',
   },
   careers: {
-    title: 'Careers at SPECO Interiors Kochi | Join Our Team',
+    title: 'Careers at SPECO Interiors | Join Our Team',
     description:
-      'Join SPECO Interiors in Kochi. Careers in interior design, manufacturing, and project delivery with a customer-first team.',
+      'Join SPECO Interiors. Careers in interior design, site execution, manufacturing, and sales with a client-first team.',
     path: '/careers',
   },
   blogs: {
-    title: 'Interior Design Blog Kochi | SPECO Interiors Tips',
+    title: 'Interior Design Blog | SPECO Interiors Tips & Ideas',
     description:
-      'Ideas and insights on modular kitchens, materials for Kerala homes, and turnkey interiors from SPECO Interiors — Kochi’s trusted design & manufacturing team.',
+      'Ideas and insights on modular kitchens, wardrobes, living rooms, materials for Kerala homes, and turnkey interiors from the SPECO Interiors team.',
     path: '/blogs',
   },
   faq: {
-    title: 'FAQ | SPECO Interiors Kochi — Interior Design Questions',
+    title: 'FAQ | SPECO Interiors Interior Design Questions',
     description:
-      'Frequently asked questions about SPECO Interiors services, timelines, manufacturing, and how to start your interior project in Kochi.',
+      'Answers about SPECO Interiors services, timelines, in-house manufacturing, and how to start your interior project.',
     path: '/faq',
   },
   testimonials: {
-    title: 'Client Testimonials | SPECO Interiors Kochi',
+    title: 'Client Testimonials | SPECO Interiors',
     description:
-      'Read client reviews of SPECO Interiors — real homes and workplaces designed and built by trusted interior designers in Kochi.',
+      'What clients say about homes and workplaces designed and built by SPECO Interiors.',
     path: '/testimonials',
   },
   terms: {
     title: 'Terms & Conditions | SPECO Interiors',
     description:
-      'Terms & Conditions for using the SPECO Interiors website and engaging our interior design services in Kochi.',
+      'Terms & Conditions for using the SPECO Interiors website and engaging our interior design, modular kitchen, and wardrobe services.',
     path: '/terms',
   },
   privacy: {
     title: 'Privacy Policy | SPECO Interiors',
     description:
-      'Privacy Policy for SPECO Interiors — how we handle contact details and enquiries from clients in Kochi and beyond.',
+      'Privacy Policy for SPECO Interiors: how we handle contact details and enquiries from clients.',
     path: '/privacy',
   },
 };
-
+ 
 export function absoluteUrl(path = '/') {
   if (!path) return SITE_URL;
   if (path.startsWith('http')) return path;
   return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 }
-
+ 
 export function logoUrl() {
   return absoluteUrl(LOGO_PATH);
 }
-
+ 
 export function buildMetadata({
   title,
   description,
@@ -161,7 +170,18 @@ export function buildMetadata({
       : settings?.seoDefaults?.keywords?.length
         ? settings.seoDefaults.keywords
         : DEFAULT_KEYWORDS;
-
+ 
+  const geoPosition = geo.geoPosition || GEO.position;
+  const other = {
+    'geo.region': geo.geoRegion || GEO.region,
+    'geo.placename': geo.geoPlacename || GEO.placename,
+    'og:locale:alternate': 'ml_IN',
+  };
+  if (geoPosition) {
+    other['geo.position'] = geoPosition;
+    other.ICBM = geoPosition.replace(';', ', ');
+  }
+ 
   return {
     title: { absolute: metaTitle },
     description: metaDescription,
@@ -206,7 +226,7 @@ export function buildMetadata({
           width: 1024,
           height: 1024,
           type: 'image/jpeg',
-          alt: `${BRAND_SHORT} — Rooted in Care. Built on Trust.`,
+          alt: `${BRAND_SHORT} — ${TAGLINE}`,
         },
       ],
       locale: 'en_IN',
@@ -218,21 +238,15 @@ export function buildMetadata({
       description: metaDescription,
       images: [ogImage],
     },
-    other: {
-      'geo.region': geo.geoRegion || GEO.region,
-      'geo.placename': geo.geoPlacename || GEO.placename,
-      'geo.position': geo.geoPosition || GEO.position,
-      ICBM: (geo.geoPosition || GEO.position).replace(';', ', '),
-      'og:locale:alternate': 'ml_IN',
-    },
+    other,
   };
 }
-
+ 
 /** Page metadata without title template doubling — pass absolute title string */
 export function pageMetadata(keyOrConfig, overrides = {}) {
   const base = typeof keyOrConfig === 'string' ? PAGE_SEO[keyOrConfig] : keyOrConfig;
   if (!base) return buildMetadata(overrides);
-
+ 
   const title = overrides.title || base.title;
   const meta = buildMetadata({
     ...base,
@@ -242,12 +256,12 @@ export function pageMetadata(keyOrConfig, overrides = {}) {
     path: overrides.path || base.path,
     keywords: overrides.keywords || base.keywords || DEFAULT_KEYWORDS,
   });
-
+ 
   // Absolute title — avoid template doubling on brand-complete titles
   meta.title = { absolute: title };
   return meta;
 }
-
+ 
 export function organizationJsonLd(settings) {
   const brand = settings?.brandName || BRAND_NAME;
   const social = settings?.social || {};
@@ -259,7 +273,18 @@ export function organizationJsonLd(settings) {
     social.twitterUrl,
     social.pinterestUrl,
   ].filter(Boolean);
-
+ 
+  const phones = settings?.contact?.phones?.length ? settings.contact.phones : GEO.phones;
+ 
+  const address = {
+    '@type': 'PostalAddress',
+    streetAddress: settings?.contact?.address || GEO.streetAddress,
+    addressLocality: GEO.addressLocality,
+    addressRegion: GEO.addressRegion,
+    addressCountry: GEO.addressCountry,
+  };
+  if (GEO.postalCode) address.postalCode = GEO.postalCode;
+ 
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -267,6 +292,7 @@ export function organizationJsonLd(settings) {
     name: brand,
     alternateName: [BRAND_SHORT, 'SPECO Interiors Kochi'],
     url: SITE_URL,
+    slogan: TAGLINE,
     logo: {
       '@type': 'ImageObject',
       url: settings?.logoUrl ? absoluteUrl(settings.logoUrl) : logoUrl(),
@@ -274,25 +300,25 @@ export function organizationJsonLd(settings) {
     image: absoluteUrl(OG_IMAGE_PATH),
     description: DEFAULT_DESCRIPTION,
     email: settings?.contact?.email || GEO.email,
-    telephone: settings?.contact?.phones?.[0] || GEO.phone,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: settings?.contact?.address || GEO.streetAddress,
-      addressLocality: GEO.addressLocality,
-      addressRegion: GEO.addressRegion,
-      postalCode: GEO.postalCode,
-      addressCountry: GEO.addressCountry,
-    },
+    telephone: phones[0],
+    contactPoint: phones.map((telephone) => ({
+      '@type': 'ContactPoint',
+      telephone,
+      contactType: 'customer service',
+      areaServed: 'IN',
+      availableLanguage: ['English', 'Malayalam'],
+    })),
+    address,
     sameAs,
   };
 }
-
+ 
 export function localBusinessJsonLd(settings) {
   const brand = settings?.brandName || BRAND_NAME;
   const contact = settings?.contact || {};
   const org = organizationJsonLd(settings);
-
-  return {
+ 
+  const business = {
     '@context': 'https://schema.org',
     '@type': ['HomeAndConstructionBusiness', 'LocalBusiness'],
     '@id': `${SITE_URL}/#localbusiness`,
@@ -300,7 +326,7 @@ export function localBusinessJsonLd(settings) {
     alternateName: BRAND_SHORT,
     description:
       settings?.seoDefaults?.metaDescription ||
-      'Best interior designers in Kochi offering residential & commercial interiors, modular kitchens, and turnkey manufacturing.',
+      'Interior designers in Kochi and Ernakulam offering residential and commercial interiors, modular kitchens, custom wardrobes, and turnkey manufacturing.',
     url: SITE_URL,
     image: [absoluteUrl(OG_IMAGE_PATH), logoUrl()],
     logo: logoUrl(),
@@ -310,12 +336,6 @@ export function localBusinessJsonLd(settings) {
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Credit Card, UPI, Bank Transfer',
     address: org.address,
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: GEO.latitude,
-      longitude: GEO.longitude,
-    },
-    hasMap: `https://www.google.com/maps?q=${GEO.latitude},${GEO.longitude}`,
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'AdministrativeArea', name: 'Ernakulam' },
@@ -325,6 +345,7 @@ export function localBusinessJsonLd(settings) {
       'Interior design',
       'Modular kitchens',
       'Custom wardrobes',
+      'Living room and bedroom interiors',
       'Commercial interiors',
       'Turnkey interiors',
       'In-house furniture manufacturing',
@@ -340,8 +361,23 @@ export function localBusinessJsonLd(settings) {
     sameAs: org.sameAs,
     parentOrganization: { '@id': `${SITE_URL}/#organization` },
   };
+ 
+  if (hasCoords(GEO)) {
+    business.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: GEO.latitude,
+      longitude: GEO.longitude,
+    };
+    business.hasMap = `https://www.google.com/maps?q=${GEO.latitude},${GEO.longitude}`;
+  } else {
+    business.hasMap = `https://www.google.com/maps?q=${encodeURIComponent(
+      `${GEO.streetAddress}, ${GEO.addressLocality}, ${GEO.addressRegion}, India`
+    )}`;
+  }
+ 
+  return business;
 }
-
+ 
 export function websiteJsonLd() {
   return {
     '@context': 'https://schema.org',
@@ -349,7 +385,7 @@ export function websiteJsonLd() {
     '@id': `${SITE_URL}/#website`,
     url: SITE_URL,
     name: BRAND_NAME,
-    alternateName: ['SPECO Interiors', 'Best Interior Designers in Kochi'],
+    alternateName: ['SPECO Interiors', 'SPECO Interiors Kochi'],
     description: DEFAULT_DESCRIPTION,
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'en-IN',
@@ -363,7 +399,7 @@ export function websiteJsonLd() {
     },
   };
 }
-
+ 
 export function faqJsonLd(faqs = []) {
   return {
     '@context': 'https://schema.org',
@@ -375,7 +411,7 @@ export function faqJsonLd(faqs = []) {
     })),
   };
 }
-
+ 
 export function breadcrumbJsonLd(items = []) {
   return {
     '@context': 'https://schema.org',
@@ -388,30 +424,35 @@ export function breadcrumbJsonLd(items = []) {
     })),
   };
 }
-
+ 
 export function serviceJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Interior Design & Manufacturing — Kochi',
+    name: 'Interior Design & Manufacturing — Kochi & Ernakulam',
     serviceType: 'Interior design',
     provider: { '@id': `${SITE_URL}/#localbusiness` },
-    areaServed: { '@type': 'City', name: 'Kochi' },
+    areaServed: [
+      { '@type': 'City', name: 'Kochi' },
+      { '@type': 'AdministrativeArea', name: 'Ernakulam' },
+    ],
     description:
-      'Full-service interior design, modular kitchens, wardrobes, commercial fit-outs, and turnkey installation by SPECO Interiors in Kochi.',
+      'Full-service interior design, modular kitchens, custom wardrobes, living and bedroom interiors, commercial interiors, and complete turnkey installation by SPECO Interiors.',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'SPECO Interiors Services',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Residential Interiors' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Modular Kitchens' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Interiors' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Turnkey Solutions' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Modular Kitchens' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Wardrobes' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Living & Bedroom Interiors' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Complete Interior Solutions' } },
       ],
     },
   };
 }
-
+ 
 export function siteGraphJsonLd(settings) {
   return {
     '@context': 'https://schema.org',

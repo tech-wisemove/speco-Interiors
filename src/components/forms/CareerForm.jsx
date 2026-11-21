@@ -5,10 +5,12 @@ import { submitToGoogleSheet } from '@/lib/googleForms';
 
 const DESIGNATIONS = [
   'Interior Designer',
-  'CNC Operator',
-  'Accountant',
   'Site Supervisor',
+  'Carpenter',
+  'CNC Operator',
+  'Sales Executive',
   'Marketing Manager',
+  'Accountant',
 ];
 
 export default function CareerForm() {
@@ -125,7 +127,7 @@ export default function CareerForm() {
                 Upload CV (PDF / DOC / DOCX, max 5 MB)
               </label>
               <input
-                className="form-control"
+                className="form-control career-file-input"
                 name="cv"
                 id="cv"
                 type="file"
