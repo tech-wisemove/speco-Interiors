@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --brand: #aca18f;
-  --brand-dark: #92897a;
-  --ink: #1a1a1a;
-  --muted: #5c5c5c;
-  --paper: #f7f4ef;
+  /* Primary Brand Colours */
+  --brand: #606850;
+  --brand-dark: #454D3D;
+
+  /* Secondary Brand Colour */
+  --brand-light: #B0B098;
+
+  /* Background Colours */
+  --paper: #F7F3EC;
+  --beige: #E8E3D9;
+  --white: #FFFFFF;
+
+  /* Text Colours */
+  --ink: #1A1A1A;
+  --muted: #5C5C5C;
 }

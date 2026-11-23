@@ -13,7 +13,7 @@ export default function HomePage() {
 
       <div className="owl-carousel owl-1 home-hero">
         <div className="ftco-blocks-cover-1">
-          <div className="ftco-cover-1 home-hero__slide" style={{backgroundImage: `url('${withBase('/images/projects/jpg/project-03.jpg')}')`}}>
+          <div className="ftco-cover-1 home-hero__slide" style={{backgroundImage: `url('${withBase('/images/projects/jpg/project.jpeg')}')`}}>
             <div className="container">
               <div className="row align-items-center justify-content-center">
                 <div className="col-lg-6 home-hero__content">
@@ -239,11 +239,11 @@ export default function HomePage() {
 
         <div className="media-29191">
           <div className="owl-2 owl-carousel">
-            <img src={withBase("/images/projects/jpg/project-03.jpg")} alt="Living Rooms" title="Living Rooms" className="img-fluid" />
-            <img src={withBase("/images/projects/jpg/project-04.jpg")} alt="Modular Kitchens" title="Modular Kitchens" className="img-fluid" />
+            {/* <img src={withBase("/images/projects/jpg/project-03.jpg")} alt="Living Rooms" title="Living Rooms" className="img-fluid" />
+            <img src={withBase("/images/projects/jpg/project-04.jpg")} alt="Modular Kitchens" title="Modular Kitchens" className="img-fluid" /> */}
             <img src={withBase("/images/projects/jpg/project-13.jpg")} alt="Bedrooms" title="Bedrooms" className="img-fluid" />
-            <img src={withBase("/images/projects/jpg/project-01.jpg")} alt="Dining Areas" title="Dining Areas" className="img-fluid" />
-            <img src={withBase("/images/projects/jpg/project-07.jpg")} alt="Wardrobes" title="Wardrobes" className="img-fluid" />
+            {/* <img src={withBase("/images/projects/jpg/project-01.jpg")} alt="Dining Areas" title="Dining Areas" className="img-fluid" />
+            <img src={withBase("/images/projects/jpg/project-07.jpg")} alt="Wardrobes" title="Wardrobes" className="img-fluid" /> */}
             <img src={withBase("/images/projects/jpg/project-11.jpg")} alt="Office Interiors" title="Office Interiors" className="img-fluid" />
           </div>
           <div className="container">
@@ -360,7 +360,7 @@ export default function HomePage() {
         <div className="speco-image-wrapper speco-craft-image">
 
           <img
-            src={withBase("/images/craft/craft-main.jpg")}
+            src={withBase("/images/projects/jpg/speco-01.jpeg")}
             alt="SPECO precision craftsmanship"
             className="img-fluid"
           />
@@ -390,7 +390,7 @@ export default function HomePage() {
         <div className="speco-image-wrapper speco-process-image">
 
           <img
-            src={withBase("/images/process/process-main.jpg")}
+            src={withBase("/images/projects/jpg/speco-02.jpeg")}
             alt="SPECO interior design process"
             className="img-fluid"
           />
@@ -610,7 +610,7 @@ export default function HomePage() {
         <div className="speco-image-wrapper speco-why-image">
 
           <img
-            src={withBase("/images/why-speco/why-speco.jpg")}
+            src={withBase("/images/projects/jpg/speco-03.jpeg")}
             alt="SPECO interior design and craftsmanship"
             className="img-fluid"
           />
