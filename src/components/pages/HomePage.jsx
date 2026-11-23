@@ -366,7 +366,7 @@ export default function HomePage() {
           />
 
           <div className="speco-image-caption">
-            <span>01 / OUR CRAFT</span>
+            
             <p>Precision in every detail.</p>
           </div>
 
@@ -396,7 +396,7 @@ export default function HomePage() {
           />
 
           <div className="speco-image-caption">
-            <span>02 / OUR PROCESS</span>
+           
             <p>From vision to reality.</p>
           </div>
 
@@ -616,7 +616,7 @@ export default function HomePage() {
           />
 
           <div className="speco-image-caption">
-            <span>03 / WHY SPECO</span>
+            
             <p>Designed around you.</p>
           </div>
 
