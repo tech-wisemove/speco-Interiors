@@ -272,10 +272,17 @@ h5,
 /* ---------- Forms ---------- */
 .form-control {
     height: 55px;
+    min-height: 48px;
     background: var(--white) !important;
     color: var(--olive-dark);
     border: 1px solid var(--beige);
     font-family: var(--font-body);
+    font-size: 16px;
+}
+
+textarea.form-control {
+    height: auto;
+    min-height: 140px;
 }
 
 .form-control:hover {
@@ -1046,7 +1053,12 @@ h5,
 
 .ftco-cover-1,
 .ftco-cover-1 .container > .row {
-    min-height: 600px;
+    min-height: clamp(420px, 78vh, 600px);
+}
+
+.ftco-cover-1 h1 {
+    font-size: clamp(1.7rem, 0.85rem + 2.4vw, 2.5rem);
+    line-height: 1.15;
 }
 
 .ftco-cover-1 > .container {
@@ -1828,6 +1840,11 @@ h5,
     font-size: 12px;
     font-weight: bold;
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-right: 20px;
 }
 
@@ -2132,43 +2149,47 @@ body.loading {
     color: var(--white) !important;
 }
 
-/* ---------- Hero buttons ---------- */
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
 .hero-buttons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .hero-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 16px 28px;
-    min-height: 55px;
+    flex: 0 1 200px;
+    min-width: 0;
+    min-height: 52px;
+    padding: 14px 18px;
+
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    text-align: center;
     text-decoration: none;
+    white-space: nowrap;
+
     border-radius: 3px;
+    cursor: pointer;
     transition: all 0.35s ease;
 }
 
+/* Primary Button */
 .hero-btn-primary {
     background: var(--olive);
     color: var(--white);
     border: 1px solid var(--olive);
-}
-
-.hero-btn-outline {
-    background: transparent;
-    color: var(--ivory);
-    border: 1px solid var(--sage);
-}
-
-.hero-btn:hover {
-    transform: translateY(-3px);
 }
 
 .hero-btn-primary:hover {
@@ -2177,12 +2198,25 @@ body.loading {
     color: var(--white);
 }
 
+/* Outline Button */
+.hero-btn-outline {
+    background: transparent;
+    color: var(--ivory);
+    border: 1px solid var(--sage);
+}
+
 .hero-btn-outline:hover {
     background: var(--olive);
     border-color: var(--olive);
     color: var(--white);
 }
 
+/* Common Hover Effect */
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Arrow Animation */
 .hero-btn span {
     transition: transform 0.3s ease;
 }
@@ -2190,6 +2224,57 @@ body.loading {
 .hero-btn:hover span {
     transform: translate(4px, -4px);
 }
+
+/* Focus Accessibility */
+.hero-btn:focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 991px) {
+    .hero-buttons {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+    .hero-buttons {
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    .hero-btn {
+        flex: 1 1 0;
+        max-width: 180px;
+        min-height: 48px;
+        padding: 12px 10px;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+    .hero-buttons {
+        gap: 6px;
+    }
+
+    .hero-btn {
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+}
+
 
 /* ---------- SPECO sections: shared ---------- */
 .speco-craft-section,
@@ -2617,6 +2702,11 @@ body.loading {
     }
 }
 
+/* Keep flex columns from forcing a horizontal scroll */
+.row > [class*='col'] {
+    min-width: 0;
+}
+
 /* ---------- Large desktop (>= 1400px) ---------- */
 @media (min-width: 1400px) {
     .speco-craft-section,
@@ -2638,16 +2728,36 @@ body.loading {
 
 /* ---------- Ultra wide (>= 1800px) ---------- */
 @media (min-width: 1800px) {
+    .container {
+        max-width: 1320px;
+    }
+
     .site-navbar .site-logo img {
-        height: 250px;
+        height: auto;
+        max-height: 160px;
+        max-width: 100%;
     }
 }
 
 /* ---------- Small desktop / large tablet (<= 1199.98px) ---------- */
 @media (max-width: 1199.98px) {
+    .site-navbar .site-navigation .site-menu {
+        white-space: nowrap;
+    }
+
     .site-navbar .site-navigation .site-menu > li > a {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 6px;
+        margin-right: 6px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 0.82rem;
+        letter-spacing: 0;
+    }
+
+    .site-navbar .site-logo img {
+        height: auto;
+        max-height: 110px;
+        max-width: min(220px, 100%);
     }
 
     .speco-craft-content {
@@ -2711,9 +2821,9 @@ body.loading {
         align-items: center;
         justify-content: center;
         text-align: center !important;
-        padding-left: 10px;
-        padding-right: 10px;
-        min-height: clamp(100px, 28vw, 140px);
+        padding-left: 8px;
+        padding-right: 60px;
+        min-height: clamp(84px, 24vw, 120px);
     }
 
     .site-navbar .site-logo {
@@ -2723,12 +2833,19 @@ body.loading {
         flex: 0 1 auto;
         min-width: 0;
         width: auto;
-        max-width: calc(100% - 56px);
+        max-width: 100%;
+    }
+
+    .site-navbar .site-logo a {
+        width: auto;
+        max-width: 100%;
     }
 
     .site-navbar .site-logo img {
-        height: clamp(90px, 26vw, 150px);
-        max-width: min(380px, 74vw);
+        height: auto;
+        max-height: clamp(64px, 20vw, 112px);
+        max-width: 100%;
+        width: auto;
     }
 
     .site-navbar .toggle-button {
@@ -2836,6 +2953,10 @@ body.loading {
 
     .home-legacy {
         margin-top: 2rem;
+    }
+
+    .col-md-5.text-right {
+        text-align: left !important;
     }
 
     .media-92812 .text {
@@ -2968,6 +3089,23 @@ body.loading {
 
     .form-control {
         height: 50px;
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    textarea.form-control {
+        height: auto;
+        min-height: 120px;
+    }
+
+    .input-group > .form-control {
+        min-width: 0;
+    }
+
+    .input-group-append .btn,
+    .footer-suscribe-form .btn {
+        min-height: 48px;
+        min-width: 48px;
     }
 
     .block-feature-1-wrap > .container > .row {
@@ -3061,8 +3199,17 @@ body.loading {
 
 /* ---------- Small phone (<= 480px) ---------- */
 @media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .hero-btn {
+        flex: 1 1 auto;
         width: 100%;
+        max-width: none;
+        white-space: normal;
+        line-height: 1.25;
     }
 
     .home-legacy__stat {

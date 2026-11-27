@@ -1,32 +1,16 @@
 'use client';
 
 import { withBase } from '@/lib/paths';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-/** Set NEXT_PUBLIC_FEATURED_YOUTUBE_ID in .env.local / GitHub vars to override */
-const VIDEO_ID =
-  process.env.NEXT_PUBLIC_FEATURED_YOUTUBE_ID || 'vf5LaUHFUGc';
-
+const VIDEO_SRC = withBase('/videos/features.mp4');
 const POSTER = withBase('/images/projects/jpg/project-09.jpg');
-
-function embedSrc({ autoplay, mute }) {
-  const params = new URLSearchParams({
-    autoplay: autoplay ? '1' : '0',
-    mute: mute ? '1' : '0',
-    playsinline: '1',
-    rel: '0',
-    modestbranding: '1',
-    controls: '1',
-    enablejsapi: '1',
-  });
-  return `https://www.youtube.com/embed/${VIDEO_ID}?${params.toString()}`;
-}
 
 export default function FeaturedYoutube() {
   const sectionRef = useRef(null);
+  const videoRef = useRef(null);
   const [active, setActive] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -35,12 +19,9 @@ export default function FeaturedYoutube() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
-          setInView(true);
           setActive(true);
           setMuted(true);
         } else if (!entry.isIntersecting && entry.intersectionRatio < 0.15) {
-          // Pause by unloading autoplay when leaving viewport
-          setInView(false);
           setActive(false);
         }
       },
@@ -51,10 +32,26 @@ export default function FeaturedYoutube() {
     return () => observer.disconnect();
   }, []);
 
+  useLayoutEffect(() => {
+    const video = videoRef.current;
+    if (!video || !active) return undefined;
+    video.muted = muted;
+    const play = video.play();
+    if (play && typeof play.catch === 'function') {
+      play.catch(() => {});
+    }
+    return undefined;
+  }, [active, muted]);
+
   function playWithSound(e) {
     e?.preventDefault?.();
     setMuted(false);
     setActive(true);
+    const video = videoRef.current;
+    if (video) {
+      video.muted = false;
+      video.play().catch(() => {});
+    }
   }
 
   return (
@@ -81,14 +78,15 @@ export default function FeaturedYoutube() {
           </button>
         ) : (
           <div className="featured-video__player">
-            <iframe
-              key={`${muted ? 'm' : 'u'}-${inView}`}
-              src={embedSrc({ autoplay: true, mute: muted })}
-              title="SPECO Interiors featured video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
+            <video
+              ref={videoRef}
+              src={VIDEO_SRC}
+              poster={POSTER}
+              autoPlay
+              muted={muted}
+              playsInline
+              loop
+              controls
             />
             {muted ? (
               <button

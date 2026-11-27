@@ -11,6 +11,9 @@ let resolvedUrl = ENV_URL.includes('script.google.com')
 
 let resolvePromise = null;
 
+/** One in-flight request per form so a double click cannot submit twice. */
+const inFlight = new Set();
+
 // CV validation
 const MAX_CV_BYTES = 5 * 1024 * 1024; // 5 MB
 
@@ -99,13 +102,20 @@ function fileToBase64(file) {
   });
 }
 
+function cvMimeType(file) {
+  if (ALLOWED_CV_TYPES.includes(file.type)) return file.type;
+  const ext = String(file.name || '').split('.').pop().toLowerCase();
+  if (ext === 'pdf') return 'application/pdf';
+  if (ext === 'doc') return 'application/msword';
+  if (ext === 'docx') {
+    return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  }
+  return '';
+}
+
 /**
- * Submit form data to Google Apps Script.
- *
- * Supported forms:
- * contact
- * careers
- * subscribe
+ * Submit Contact, Careers, or Subscribe to the same Apps Script web app.
+ * The script stores every submission on the spreadsheet tab named Submissions.
  *
  * @param {'contact'|'careers'|'subscribe'} formType
  * @param {Record<string, unknown>} fields
@@ -117,84 +127,83 @@ export async function submitToGoogleSheet(
   fields,
   options = {}
 ) {
-  // Resolve Google Script URL
-  const scriptUrl = await resolveScriptUrl();
-
-  if (!isValidScriptUrl(scriptUrl)) {
-    throw new Error(
-      'Google Apps Script URL is not configured. Check form-config.json.'
-    );
+  if (inFlight.has(formType)) {
+    throw new Error('A submission is already in progress. Please wait.');
   }
 
-  // Prepare payload
-  const payload = {
-    formType,
-    submittedAt: new Date().toISOString(),
+  inFlight.add(formType);
 
-    pageUrl:
-      typeof window !== 'undefined'
-        ? window.location.href
-        : '',
+  try {
+    const scriptUrl = await resolveScriptUrl();
 
-    ...fields,
-  };
-
-  // Career CV upload
-  if (formType === 'careers') {
-    const file = options.cvFile;
-
-    if (!(file instanceof File) || !file.size) {
-      throw new Error('Please upload your CV.');
-    }
-
-    if (file.size > MAX_CV_BYTES) {
-      throw new Error('CV must be 5 MB or smaller.');
-    }
-
-    if (!ALLOWED_CV_TYPES.includes(file.type)) {
+    if (!isValidScriptUrl(scriptUrl)) {
       throw new Error(
-        'CV must be a PDF or Word document (.pdf, .doc, .docx).'
+        'Google Apps Script URL is not configured. Check form-config.json.'
       );
     }
 
-    payload.cvFileName = file.name;
-    payload.cvMimeType = file.type;
-    payload.cvBase64 = await fileToBase64(file);
+    // formType and pageUrl are applied after fields so a form cannot override them.
+    const payload = {
+      submittedAt: new Date().toISOString(),
+      ...fields,
+      formType,
+      pageUrl:
+        typeof window !== 'undefined'
+          ? window.location.href
+          : '',
+    };
+
+    if (formType === 'careers') {
+      const file = options.cvFile;
+
+      if (!(file instanceof File) || !file.size) {
+        throw new Error('Please upload your CV.');
+      }
+
+      if (file.size > MAX_CV_BYTES) {
+        throw new Error('CV must be 5 MB or smaller.');
+      }
+
+      const mimeType = cvMimeType(file);
+      if (!mimeType) {
+        throw new Error(
+          'CV must be a PDF or Word document (.pdf, .doc, .docx).'
+        );
+      }
+
+      payload.cvFileName = file.name;
+      payload.cvMimeType = mimeType;
+      payload.cvBase64 = await fileToBase64(file);
+    }
+
+    const res = await fetch(scriptUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify(payload),
+      redirect: 'follow',
+    });
+
+    const responseText = await res.text();
+
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      throw new Error(
+        'Unexpected response from Google Apps Script. Check deployment.'
+      );
+    }
+
+    if (!res.ok || !data || data.ok !== true) {
+      throw new Error(
+        (data && data.error) || 'Submission failed. Please try again.'
+      );
+    }
+
+    return data;
+  } finally {
+    inFlight.delete(formType);
   }
-
-  // Send data to Google Apps Script
-  const res = await fetch(scriptUrl, {
-    method: 'POST',
-
-    headers: {
-      'Content-Type': 'text/plain;charset=utf-8',
-    },
-
-    body: JSON.stringify(payload),
-
-    redirect: 'follow',
-  });
-
-  // Read response
-  const responseText = await res.text();
-
-  let data;
-
-  try {
-    data = JSON.parse(responseText);
-  } catch {
-    throw new Error(
-      'Unexpected response from Google Apps Script. Check deployment.'
-    );
-  }
-
-  // Handle errors
-  if (!res.ok || data.ok === false) {
-    throw new Error(
-      data.error || 'Submission failed. Please try again.'
-    );
-  }
-
-  // Return successful response
-  return data;
 }

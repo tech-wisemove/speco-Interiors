@@ -228,12 +228,14 @@ export default function SiteLayout({ children }) {
           aspect-ratio: 16 / 9;
           background: var(--olive-dark);
         }
-        .featured-video__player iframe {
+        .featured-video__player video {
           position: absolute;
           inset: 0;
           width: 100%;
           height: 100%;
           border: 0;
+          object-fit: cover;
+          background: var(--olive-dark);
         }
         .featured-video__unmute {
           position: absolute;
@@ -1441,11 +1443,16 @@ export default function SiteLayout({ children }) {
         .form-feedback {
           margin-bottom: 1rem;
         }
-        .form-file-label {
+        .form-file-label,
+        .form-field-label {
           display: block;
           margin-bottom: 0.4rem;
           font-size: 0.9rem;
           color: var(--muted);
+        }
+        select.form-control {
+          height: 55px;
+          min-height: 48px;
         }
 
         /* ---------- React mobile menu (panel is white) ---------- */
@@ -1460,6 +1467,11 @@ export default function SiteLayout({ children }) {
         .site-mobile-menu-close-btn {
           color: var(--olive-dark);
           font-size: 1.5rem;
+          min-width: 44px;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
         }
         .site-mobile-menu .site-nav-wrap {
           list-style: none;
@@ -2022,7 +2034,30 @@ export default function SiteLayout({ children }) {
             justify-content: center;
             align-items: center;
           }
+        }
 
+        /* ---------- 992px to 1199px: keep all eight links on one line ---------- */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          .site-navbar .site-navigation .site-menu {
+            white-space: nowrap;
+          }
+          .site-navbar .site-navigation .site-menu > li > a {
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 0.78rem;
+            letter-spacing: 0;
+          }
+          .site-navbar .site-logo img {
+            height: auto;
+            max-height: 100px;
+            max-width: min(200px, 100%);
+          }
+        }
+
+        /* ---------- >= 992px (desktop layouts) ---------- */
+        @media (min-width: 992px) {
           .about-page .about-story__grid {
             grid-template-columns: 1.05fr 0.95fr;
             gap: 3.5rem;
@@ -2105,12 +2140,26 @@ export default function SiteLayout({ children }) {
           .site-navbar .container > .row > [class*='col-']:nth-child(2) {
             justify-content: center;
             text-align: center !important;
+            padding-left: 8px !important;
+            padding-right: 60px !important;
+          }
+          .site-navbar .site-logo,
+          .site-navbar .site-logo a {
+            width: auto;
+            max-width: 100%;
+          }
+          .site-navbar .site-logo img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: clamp(64px, 20vw, 112px);
           }
           .site-navbar .toggle-button {
             position: absolute !important;
-            right: 10px;
+            right: 4px;
             top: 50%;
             transform: translateY(-50%);
+            z-index: 3;
           }
 
           .services-page .svc-tile--tall {
@@ -2300,6 +2349,20 @@ export default function SiteLayout({ children }) {
           .projects-row__content {
             padding-left: 1.1rem;
             padding-right: 1.1rem;
+          }
+
+          .about-page .about-story__visual {
+            grid-template-columns: 1fr;
+          }
+          .about-page .about-story__figure--main {
+            grid-row: auto;
+          }
+          .about-page .about-story__figure--side {
+            margin-top: 0;
+          }
+          .about-page .about-story__badge {
+            position: static;
+            margin-top: 0.85rem;
           }
 
           .testimonials-stack {
